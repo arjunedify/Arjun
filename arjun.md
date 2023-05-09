@@ -1,10 +1,9 @@
 # **Create AWS Account**
 
 - Visit - aws.amazon.com
+![image](https://user-images.githubusercontent.com/130965749/237010109-1aaff2be-cb24-4294-a915-d16640fd2735.png)
 
-![](RackMultipart20230508-1-3vex9c_html_ebedcc78ec61a6f9.png)
-
-![](RackMultipart20230508-1-3vex9c_html_b96623b1a2566f69.png)
+![image](https://user-images.githubusercontent.com/130965749/237010259-b1bc3cfb-551e-4ff3-8f0f-a2fc551c6bd3.png)
 
 **Setting up AWS Account**
 
@@ -22,13 +21,13 @@
 
 - Click " **Continue**" to proceed
 
-![](RackMultipart20230508-1-3vex9c_html_5ea015305fc2c72a.png)
+![image](https://user-images.githubusercontent.com/130965749/237010454-3572ddbc-9530-49b1-828f-e3bee3df4f72.png)
 
 - Next, you'll provide your contact information. If you're registering as an individual, select " **Personal**" and if you're using any business, select "Company"
 
 - Complete the remaining fields with your information. Then click "Create Account and Continue" to proceed.
 
-![](RackMultipart20230508-1-3vex9c_html_c2e6c97759322936.png)
+![image](https://user-images.githubusercontent.com/130965749/237010506-23be796d-a27f-41d1-aa53-b2a72cf67bb3.png)
 
 - Next, you'll be asked to provide a credit card for your AWS Account.
 
@@ -38,13 +37,13 @@
 
 - Once you receive the call, you'll input the number shown on your screen using your dial-pad
 
-![](RackMultipart20230508-1-3vex9c_html_839c982a55a5fb53.png) ![](RackMultipart20230508-1-3vex9c_html_8c248bb9aeaeda6b.png) ![](RackMultipart20230508-1-3vex9c_html_2a1538dcb530cfee.png)
+![image](https://user-images.githubusercontent.com/130965749/237010721-c05720cc-6082-437d-9832-8999ff974e59.png)
 
-![](RackMultipart20230508-1-3vex9c_html_d16c0100a73f6ad9.png)
+![image](https://user-images.githubusercontent.com/130965749/237010821-baf65186-90d5-4d91-be89-b8c30b6f6b72.png)
 
-![](RackMultipart20230508-1-3vex9c_html_d2e4005868b133f4.png)
+![image](https://user-images.githubusercontent.com/130965749/237010941-1293f8aa-b408-4bfb-832f-e802f296fba6.png)
 
-![](RackMultipart20230508-1-3vex9c_html_8418480364d38db3.png)
+![image](https://user-images.githubusercontent.com/130965749/237011010-5988431a-c530-49b3-80f9-4b624e18f5ee.png)
 
 # **Create AZURE Account**
 
@@ -64,11 +63,11 @@
 
 \> Search for **create an azure account** \>
 
-![](RackMultipart20230508-1-3vex9c_html_65faf3dee08b57cb.png)
+![image](https://user-images.githubusercontent.com/130965749/237011092-be9c8cc1-33fe-4342-85ba-23bc2bc10ebf.png)
 
 - Click on [this URL](https://azure.microsoft.com/en-us/free/), and here click on the **Start free** button.
 
-![](RackMultipart20230508-1-3vex9c_html_462836942f2d3c19.png)
+![image](https://user-images.githubusercontent.com/130965749/237011182-ab8f8d70-c92c-4ba5-997f-67072bda8c3b.png)
 
 ![](RackMultipart20230508-1-3vex9c_html_64be53ba9ce2e3f5.png)
 
