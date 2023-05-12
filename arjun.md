@@ -100,14 +100,14 @@
 
 \> From the **Start** menu, choose **All Programs** , **PuTTY** , **PuTTYgen**.
 
-![](RackMultipart20230508-1-3vex9c_html_a2b74e2ae3e92091.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e0be01b9-4d0b-43dc-8007-79480c03e69a)
 
 \> Choose **Load**. By default, PuTTYgen displays only files with the extension .ppk. To locate your .pem file, choose the option to display files of all types.
- ![](RackMultipart20230508-1-3vex9c_html_3a4d9f199842b762.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/05fb6d51-5fff-4d92-9a72-bf74c695ddfc)
 
 \> Select your .pem file for the key pair that you specified when you launched your instance and choose **Open**. PuTTYgen displays a notice that the .pem file was successfully imported. Choose **OK**.
 
-![](RackMultipart20230508-1-3vex9c_html_987d080274a60b14.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/47a7ca1d-2907-4bbd-ba56-fa2852fc928d)
 
 \> To save the key in the format that PuTTY can use, choose **Save private key**. PuTTYgen displays a warning about saving the key without a passphrase. Choose **Yes**.
 
