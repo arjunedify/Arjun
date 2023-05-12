@@ -69,15 +69,15 @@
 
 ![image](https://user-images.githubusercontent.com/130965749/237011182-ab8f8d70-c92c-4ba5-997f-67072bda8c3b.png)
 
-![](RackMultipart20230508-1-3vex9c_html_64be53ba9ce2e3f5.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/733daee2-4988-4410-a775-c7b54eb2a9cf)
 
-![](RackMultipart20230508-1-3vex9c_html_5340158465378abf.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/1d220088-0c9b-4696-a740-8afda36b9a34)
 
-![](RackMultipart20230508-1-3vex9c_html_f5c3a8374480bd58.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/3ab7b543-d277-49db-9c96-1484d28021bf)
 
-![](RackMultipart20230508-1-3vex9c_html_c2ebebb9380607a1.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/283de6a1-30b6-49ea-93f8-1047784f7e4b)
 
-![](RackMultipart20230508-1-3vex9c_html_fdff4379b72cc32d.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/106a9520-26e3-4d77-9e83-e0b64feb1c93)
 
 # **Create AZURE VM**
 
