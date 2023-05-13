@@ -148,29 +148,29 @@ Choose **Yes**. A window opens and you are connected to your instance.
 
 Once [Git Bash Windows installer](https://git-scm.com/download/win) is downloaded, run the executable file and follow the steps.
 
-![](RackMultipart20230508-1-3vex9c_html_4754d91e7c86b2aa.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/c6fb3a8c-5962-4ff1-b4ce-8ec09fcbcf14)
 
-![](RackMultipart20230508-1-3vex9c_html_d9e74e4a44bcb3b.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/399045c2-6713-4c2c-a0f0-c6a27a4c8d4f)
 
-![](RackMultipart20230508-1-3vex9c_html_570045156d987cba.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/866d26e3-772e-4e52-8f06-318736d14004)
 
-![](RackMultipart20230508-1-3vex9c_html_a944b862de24c5fb.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/be979396-6ea6-4080-94bc-03152432e1af)
 
-![](RackMultipart20230508-1-3vex9c_html_d1f2a1470714472e.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e0410746-9ffb-4031-b1c0-9f3ddb834c6d)
 
-![](RackMultipart20230508-1-3vex9c_html_4952414646106503.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/f5a10d6d-cf90-4dd7-b2ff-0e4ccb189927)
 
-![](RackMultipart20230508-1-3vex9c_html_41998ad4ab87d7d2.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d78475d6-5804-4592-b5ed-06e05e6ab186)
 
-![](RackMultipart20230508-1-3vex9c_html_6c483b489199a6f7.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/a9ac3510-73c1-445c-9a1e-b80c668badd1)
 
-![](RackMultipart20230508-1-3vex9c_html_8458ba255ffad6f7.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d45adcb2-ace4-4261-a020-b09c6fce8d29)
 
-![](RackMultipart20230508-1-3vex9c_html_13b5bf48e18f0fe8.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/7d1f8f33-39bd-48ed-981c-38b7c7fd009d)
 
-![](RackMultipart20230508-1-3vex9c_html_2b2198fb4be0abc8.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/6586c38b-3e44-4bab-8150-b5a87170d459)
 
-![](RackMultipart20230508-1-3vex9c_html_82adb21e9a263d22.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/a093f1d2-7365-4d92-8b51-d09e45a36f1d)
 
 # **Install VS Code**
 
