@@ -111,7 +111,7 @@
 
 \> To save the key in the format that PuTTY can use, choose **Save private key**. PuTTYgen displays a warning about saving the key without a passphrase. Choose **Yes**.
 
-![](RackMultipart20230508-1-3vex9c_html_b8b5728f0dd55fb4.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/1f3c6f11-f744-4b36-9b52-4bab67d2f6de)
 
 \> Specify the same name for the key that you used for the key pair (for example, my-key-pair) and choose **Save**. PuTTY automatically adds the .ppk file extension.
 
@@ -126,7 +126,7 @@
     2. Ensure that the **Port** value is 22.
     3. Under **Connection type** , select **SSH**.
 
-![](RackMultipart20230508-1-3vex9c_html_15420e5e2f6790de.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/400c62bf-bda0-4e82-a919-07d42bc8d2c3)
 
 In the **Category** pane, expand **Connection** , expand **SSH** , and then choose **Auth**. Complete the following:
 
