@@ -182,18 +182,21 @@ Once [Git Bash Windows installer](https://git-scm.com/download/win) is downloade
 
 ### Step 2 :
 
-- Download the Visual Studio Code installer for Windows. Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe). Then, run the file – it will only take a minute.  ![](RackMultipart20230508-1-3vex9c_html_714f977015fe534f.png)
+- Download the Visual Studio Code installer for Windows. Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe). Then, run the file – it will only take a minute.  
+
+![image](https://github.com/arjunedify/Arjun/assets/132984407/badff9af-67d1-44ef-ba50-a5a1b9c301ff)
+
 - Accept the agreement and click "next."
 
-![](RackMultipart20230508-1-3vex9c_html_76c048ab2db25ab8.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/fb15f2d3-b9ce-4f42-8015-db5c2991826d)
 
 - After accepting all the requests press finish button. By default, VS Code installs under:  **"C:\users{username}\AppData\Local\Programs\Microsoft VS Code."**
 
-![](RackMultipart20230508-1-3vex9c_html_3516a5b0fc26d9e9.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d29ce28b-7bdc-4d9d-89c0-e8e298ed9556)
 
 - If the installation is successful, you will see the following:
 
-![](RackMultipart20230508-1-3vex9c_html_a22d1c0bfd19d942.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/3bee6cd4-f6d8-4b16-9873-1dadd4502835)
 
 # **Convert a pem key to ppk key**
 
