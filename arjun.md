@@ -133,13 +133,14 @@ In the **Category** pane, expand **Connection** , expand **SSH** , and then choo
 1. Choose **Browse**.
 2. Select the .ppk file that you generated for your key pair and choose **Open**.
 
-![](RackMultipart20230508-1-3vex9c_html_f9c5945b6cb8ada5.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/77299078-8bf6-4e75-be2a-3f9b1f114424)
 
-![](RackMultipart20230508-1-3vex9c_html_2f8e057ae1df7959.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/95dc1dee-8884-448a-ab48-073af1fae570)
+
 
 \> If this is the first time you have connected to this instance, PuTTY displays a security alert dialog box that asks whether you trust the host to which you are connecting.
 
-![](RackMultipart20230508-1-3vex9c_html_11ec9f2860201484.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ec843014-f1f2-448e-a282-13fdd090b392)
 
 Choose **Yes**. A window opens and you are connected to your instance.
 
