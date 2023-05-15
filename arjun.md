@@ -213,7 +213,7 @@ Here are the steps to quickly convert a PEM to a PPK file with PuTTYGen:
 
 Step 3 often causes problems, because the file selector is set to PPK so the PEM will not be visible even if you select the correct folder. Just change the filetype to \*.\* and every filetype will be visible.
 
-[![](RackMultipart20230508-1-3vex9c_html_296a4ee361ce6760.jpg)](https://itknowledgeexchange.techtarget.com/coffee-talk/files/2022/02/puttygen-pem-ppk-conversion.jpg)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ac07d056-9e54-47e3-add3-9f98ceff353e)
 
 Upon import, PuTTYgen explains how to convert an SSH PEM to a PPK format for use with PuTTY.
 
@@ -231,25 +231,26 @@ Sign in to the [Azure portal](https://portal.azure.com/).
 3. In the  **Virtual machines**  page, select  **Create**  and then  **Virtual machine**. The  **Create a virtual machine**  page opens.
 4. In the  **Basics**  tab, under  **Project details** , make sure the correct subscription is selected and then choose to  **Create new**  resource group. Enter _myResourceGroup_ for the name.\*.
 
-![](RackMultipart20230508-1-3vex9c_html_8698d6e30df3e1c2.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/0c37d154-7d8f-40ea-b3c6-85f509d44019)
 
-1. Under  **Instance details** , enter _myVM_ for the  **Virtual machine name** , and choose _Ubuntu 18.04 LTS - Gen2_ for your  **Image**. Leave the other defaults. The default size and pricing is only shown as an example. Size availability and pricing are dependent on your region and subscription.
+5. Under  **Instance details** , enter _myVM_ for the  **Virtual machine name** , and choose _Ubuntu 18.04 LTS - Gen2_ for your  **Image**. Leave the other defaults. The default size and pricing is only shown as an example. Size availability and pricing are dependent on your region and subscription.
 
-![](RackMultipart20230508-1-3vex9c_html_364ec17d322bdcc.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/8a58204c-7b04-4c9c-84d3-95e4b1406561)
 
   **Note**
 
-Some users will now see the option to create VMs in multiple zones. To learn more about this new capability, see [**Create virtual machines in an availability zone**](https://learn.microsoft.com/en-us/azure/virtual-machines/create-portal-availability-zone).  ![](RackMultipart20230508-1-3vex9c_html_f782e3d2010c8077.png)
+Some users will now see the option to create VMs in multiple zones. To learn more about this new capability, see [**Create virtual machines in an availability zone**](https://learn.microsoft.com/en-us/azure/virtual-machines/create-portal-availability-zone). 
+![image](https://github.com/arjunedify/Arjun/assets/132984407/698154bb-f391-45c5-9254-63327264ddf4)
 
 1. Under  **Administrator account** , select  **SSH public key**.
 2. In  **Username**  enter _azureuser_.
 3. For  **SSH public key source** , leave the default of  **Generate new key pair** , and then enter _myKey_ for the  **Key pair name**.
 
-![](RackMultipart20230508-1-3vex9c_html_88f3e94ab69c3cd6.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/4da987e1-a2ac-445e-a363-6de8a95d928d)
 
 1. Under  **Inbound port rules**  \>  **Public inbound ports** , choose  **Allow selected ports**  and then select **SSH (22)** and **HTTP (80)** from the drop-down.
 
-![](RackMultipart20230508-1-3vex9c_html_6c5aae4413e5e2bc.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/c22c7dbb-dfa5-4b5f-9041-3c8819e9f535)
 
 1. Leave the remaining defaults and then select the  **Review + create**  button at the bottom of the page.
 2. On the  **Create a virtual machine**  page, you can see the details about the VM you are about to create. When you are ready, select  **Create**.
@@ -257,6 +258,6 @@ Some users will now see the option to create VMs in multiple zones. To learn mor
 4. When the deployment is finished, select  **Go to resource**.
 5. On the page for your new VM, select the public IP address and copy it to your clipboard.
 
-![](RackMultipart20230508-1-3vex9c_html_990c94a1cc680ab4.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/10fada39-e6b0-42fe-b0c9-603bc38b6a35)
 
 ## Connect to virtual machine
