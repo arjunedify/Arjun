@@ -1,6 +1,6 @@
 **LMS React on single VM Deployment**
 
-![](RackMultipart20230515-1-qh41re_html_31537c04304d83fa.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e748c2af-1bb4-45f4-807a-443caf0fb7be)
 
 Source code
 
@@ -10,7 +10,7 @@ Open ports in security group
 
 22 80 8080 443 5432
 
-![](RackMultipart20230515-1-qh41re_html_f317a508a7f44883.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ac51505c-c686-4c33-9ebc-a1ee745e42d6)
 
 sudo apt install update -y
 
@@ -46,7 +46,7 @@ sudo apt-get update
 
 sudo apt-get -y install postgresql
 
-![](RackMultipart20230515-1-qh41re_html_245e172e0425f524.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/0ccd3449-baef-4109-af26-cb5ebe1625fe)
 
 - Once we installed postgress we need to set the password for the postgress
  command to set the password for postgress
@@ -65,7 +65,7 @@ postgres@ip-172-31-31-67:/home/ubuntu$ psql
 
 #psql
 
-![](RackMultipart20230515-1-qh41re_html_e3a4db7ff48e7219.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/585fa37e-2a42-4aef-b241-7b8fcc6a00be)
 
 Set the password using following command
 
@@ -75,7 +75,7 @@ Setup Backend Setup
 
 - Change the directory to /api
 
-![](RackMultipart20230515-1-qh41re_html_61dd63a83f0d0f8a.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/edf48484-8bb7-440d-93ea-5037deed802d)
 
 Navigate to api folder of lms-public /api
  then create .env file in api folder which is our backend source code.
@@ -88,7 +88,7 @@ PORT=8080
 
 DATABASE\_URL=postgresql://postgres: **digital** @localhost:5432/postgres
 
-![](RackMultipart20230515-1-qh41re_html_627e9a72c7513b1e.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ce8b428b-450f-4e98-8015-56d756717cdc)
 
 - And run the below commands to build the code
 
@@ -104,7 +104,7 @@ sudo npm run build
 
 NODE\_PORT=8080 pm2 start -i 0 build/index.js
 
-![](RackMultipart20230515-1-qh41re_html_a2edce22d1e9e428.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/5fbae98c-37f2-42ef-8592-d379e56a0425)
 
 Setting port 8080 for backend
 
@@ -112,7 +112,7 @@ Setting port 8080 for backend
 
 Now we can check backend connectivity with following command
 
-![](RackMultipart20230515-1-qh41re_html_133bc094629bffa7.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/0c51bc64-664c-476d-b031-3b138cc161da)
 
 You can monitor prisma 2 with command
 
@@ -141,9 +141,8 @@ Now add .env file for front end same as we did for backend
 .env file
 VITE\_API\_URL value to https://\<backend\_url\>/api
 
-![](RackMultipart20230515-1-qh41re_html_eb431e791da5b70a.png)
-
-![](RackMultipart20230515-1-qh41re_html_bbcfa88f50f92e4b.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/8c3e3306-e70b-4744-b9fd-163c02c62cf6)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/702945f5-2e73-41ff-87da-3a24d12014d3)
 
 **My backend url is dev.mubeen.cloud**
 
@@ -156,11 +155,11 @@ d
 
 we will get a dist file that is our frontend code … which we are deploying with nginx
 
-![](RackMultipart20230515-1-qh41re_html_f7f3570062f00a72.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/69531f2a-1e7b-49f4-ad02-d436edc2927f)
 
 We got the dist file
 
-![](RackMultipart20230515-1-qh41re_html_8164ad41a29269da.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/b8f63c91-5019-498a-a254-856877ebdbbc)
 
 Now we will remove the default config file of nginx
 
@@ -186,7 +185,7 @@ proxy\_pass http://localhost:8080;
 
 }
 
-![](RackMultipart20230515-1-qh41re_html_c81065fddb1ee8a0.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/af4793d8-6b34-4fce-8289-50931cd10635)
 
 Now goto DNS provider (godaddy or hostinger etc)
 
@@ -210,7 +209,7 @@ sudo certbot --nginx
 
  sudo nginx -s reload
 
-![](RackMultipart20230515-1-qh41re_html_5618cb58268a274a.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/71dba6d8-07ca-421d-93f2-d65786b3697f)
 
 History of commands:
 
