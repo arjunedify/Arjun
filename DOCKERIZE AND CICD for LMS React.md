@@ -2,7 +2,7 @@ _CI /CD FOR LMS REACT APPLICATION_
 
 Architecture Diagram
 
- ![](RackMultipart20230515-1-a2joel_html_9d9b6b51480f8859.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/f52cdf93-c5ac-4707-8e64-bd1b3c37e5f8)
 
  Repository url
 
@@ -41,7 +41,7 @@ DOCKER
 8.
 # _Now create a Frontend pipeline ._
 
-![](RackMultipart20230515-1-a2joel_html_a03cd1d24c79687f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/5d12bccb-87b9-43e2-a7f4-677f39eb48cc)
 
 Slave Server is our docker server
 
@@ -85,7 +85,7 @@ commad to create a docker network
 
 # docker network create -d bridge lmsnetwork
 
-![](RackMultipart20230515-1-a2joel_html_365df7ebcad95cee.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e21d0478-becf-4cad-a865-4ee0ce9a1f1f)
 
 **Goto another instance that MASTER (jenkins server)**
 
@@ -109,47 +109,47 @@ sudo apt-get install jenkins
 
 login to Jenkins server and install suggested plugins
 
-![](RackMultipart20230515-1-a2joel_html_56a4d81f65473553.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ed06f646-b424-4332-a822-4883b0ce247b)
 
 Now configuration Jenkins Master slave configuration
 
-![](RackMultipart20230515-1-a2joel_html_7889b4b10209919a.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d15d677d-e745-4026-b3f4-642db44cdffd)
 
-![](RackMultipart20230515-1-a2joel_html_3e30c4e31ba564a5.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/509f196d-d5d3-49e1-bf8c-2f26ab9cd327)
 
 **Configuring Master slave in Jenkins**
 
-![](RackMultipart20230515-1-a2joel_html_43912879f7132fa4.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/14ace91a-923e-40ba-86c0-8f3a33ad276c)
 
-![](RackMultipart20230515-1-a2joel_html_42ce984f6b71a397.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d8bcca4a-4e5b-4a1b-8d42-007f80796b59)
 
-![](RackMultipart20230515-1-a2joel_html_c268740ac26b0bf8.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/2b733b41-9fe0-42d7-844f-641aa20790a6)
 
 Now add user
 
-![](RackMultipart20230515-1-a2joel_html_c90d378d5823f7f7.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/dfe11ac0-dbc3-478e-9af0-091f52617575)
 
-![](RackMultipart20230515-1-a2joel_html_90cf0fddd0f21ed6.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d4c83c0d-6a1e-4a3d-8986-e5f8f6ef82de)
 
-![](RackMultipart20230515-1-a2joel_html_c1c252f6cdd2bd21.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/9ec86b12-0690-4d67-982a-4230ed5e6de0)
 
 Note : In slave install Java 11 as Jenkins required
 
 sudo apt install openjdk-11-jre
 
-![](RackMultipart20230515-1-a2joel_html_d3ee9caad5d11e93.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/df15243e-de3d-4549-8771-73fa6435abd4)
 
 Now Master slave configuration is completed
 
 Now create a Job (pipeline job) in Jenkins
 
-![](RackMultipart20230515-1-a2joel_html_78974d1282c44d5b.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/c4c9dc86-9554-4ef8-a2d0-a4c419b1ec03)
 
 Goto Manage credentials
 
 Add your dockerhub user credentials in jekins
 
-![](RackMultipart20230515-1-a2joel_html_6bf42b6d608b355f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/75af2d38-6109-43e0-a458-95e72f5e1874)
 
 Done with configuration of master and slave
 
@@ -251,20 +251,20 @@ sh 'docker run -d -p 8080:8080 --network lmsnetwork -e DATABASE\_URL=postgresql:
 
 Configure docker hub credentials
 
-![](RackMultipart20230515-1-a2joel_html_342a5a71b482055f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/afcfa1d4-575a-48d1-bc10-6edd61ca1f1b)
 
 Now configuring git
 
-![](RackMultipart20230515-1-a2joel_html_6c8991cb5c450380.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/2eb255de-b735-46d1-b899-3ac233034a6f)
 
 Build the Backend pipeline then update he url of backend in frontend
  at /webapp/.env file
 
-![](RackMultipart20230515-1-a2joel_html_cd52e97fe6fdb98f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/7dd8b933-88a1-4253-9266-759181753237)
 
 Now test the backend server
 
-![](RackMultipart20230515-1-a2joel_html_7a0e99da1572363f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/4a044735-6ddf-4890-9979-86bb0338af9f)
 
 Backend is up and running Now
 
@@ -276,7 +276,7 @@ Now Create FrontEnd pipeline in jenkins after updating of backend url in webapp 
 
 Note : to build frontend our backend should be up and running .
 
-![](RackMultipart20230515-1-a2joel_html_c70faa07f2a35762.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/383f3444-3ba1-4489-a5f8-8c767e56e155)
 
 Now add jenkins files at in frontend /webapp/nameof jenkinsfile
 
@@ -360,7 +360,7 @@ sh 'docker run -dt -p 8000:80 --name fe mubeen507/frontend-lms'
 
 Update user credential of docker user (example dockeruser )jenkinsfile
 
-![](RackMultipart20230515-1-a2joel_html_49541b6db8ee9e4f.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/b12dbad0-5a4c-4074-a138-e6cfbc564130)
 
 Now Build frontend pipeline
 
@@ -375,18 +375,18 @@ Note : update the Backend url in FrontEnd webapp .env
 
 Creating of frontend pipeline
 
-![](RackMultipart20230515-1-a2joel_html_79618c81d6684059.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/340bd71d-1168-4a21-8207-ccd1cfe32a1a)
 
 Provide the git repository
 
-![](RackMultipart20230515-1-a2joel_html_d64986cc3fd4a7fc.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e4080226-b6fc-43e8-9c06-bb05a193dfc9)
 
 Provide the jenkinsfile location
 
-![](RackMultipart20230515-1-a2joel_html_184019e9fa8a9eb2.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/c52dc54a-de0e-4b78-b759-eb6efafed874)
 
-![](RackMultipart20230515-1-a2joel_html_edef3663090d646c.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/ceecad1d-a186-4f1e-8e19-b869500c5242)
 
-![](RackMultipart20230515-1-a2joel_html_a84210776d2f438a.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/29fcbd8b-11be-4705-be67-37e33d912761)
 
 [Type here]
