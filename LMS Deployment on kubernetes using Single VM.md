@@ -1,7 +1,6 @@
 **LMS Deployment on kubernetes using minikube in single Virtual Machine**
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_ed0c4c9ec2518645.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/57dc01f2-9472-46dc-beb8-cf5d1dc2e20c)
 
 ##
 
@@ -27,7 +26,7 @@
 
 Yamls file Required backend and database
 
- ![](RackMultipart20230515-1-g0fvh5_html_cc78386e3414d328.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/154a0831-f94c-441f-9169-6e8cdda86e60)
 
 Images required and push the image to docker hub
 
@@ -35,9 +34,7 @@ Images required and push the image to docker hub
 
  $docker build -t k8s-backend .
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_a3ad352fc61ae076.png)
-
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d3bec4fa-f59a-4361-b6f7-c8379964628c)
 
 **2. Push the image to docker hub**
 
@@ -45,7 +42,7 @@ Images required and push the image to docker hub
 
  and docker push.
 
-![](RackMultipart20230515-1-g0fvh5_html_bca537e019f17c59.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/cc0102b0-db5e-4e7a-8df9-d9c2890dfeec)
 
 **3. Create a persistant volume**
 
@@ -105,7 +102,7 @@ hostPath:
 
 path: "/mtd/data" # Sets the volume's path
 
-![](RackMultipart20230515-1-g0fvh5_html_32c6ec56d182d6c.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/6475c002-47f4-454a-af5b-70fbcbf579bf)
  Commands to create :
 kubectl create –f database-persistent-volume.yaml
 
@@ -176,8 +173,8 @@ env:
 - name: POSTGRES\_PASSWORD
 
 value: password
+![image](https://github.com/arjunedify/Arjun/assets/132984407/696a7da3-8922-4f8b-a99c-d9ab2ecf3d26)
 
-![](RackMultipart20230515-1-g0fvh5_html_f834df9185887c4d.png)
 
 Commands to create:
 
@@ -209,9 +206,7 @@ ports:
 
 targetPort: 5432
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_d6296ab2746fcc8b.png)
-
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/6f57269d-c8e9-47e3-91fe-943dc2f0686a)
 
  commands:
 
@@ -291,7 +286,8 @@ value: postgres
 
 value: password
 
- ![](RackMultipart20230515-1-g0fvh5_html_21ebe7a2c242d354.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/615fe9e6-9598-4300-b89b-10a9c1db4b3f)
+
  commands:
 
  kubectl create –f api-deployment.yaml
@@ -324,8 +320,7 @@ targetPort: 3000
 
 type: NodePort
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_cee08e8ef2560b3a.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/d9ab31e9-5108-4bad-bf9b-fc5554544b3c)
 
  Command :
  kubectl create –f api-load-balancer-service.yaml
@@ -342,16 +337,14 @@ type: NodePort
 
  kubectl get all
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_ebac083eaa634a40.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/be6dcbf3-58ae-48f6-b5c2-bdf5e45e429f)
 
 
  Get the backend url
  Command :
  minikube service api-service –url
 
-
- ![](RackMultipart20230515-1-g0fvh5_html_1d77074a0c1937dc.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/1087f89f-15a1-4d27-ac86-3907eea1e963)
 
 
 Open the port in security group from 30000 to 32767
@@ -360,54 +353,56 @@ Open the port in security group from 30000 to 32767
 
  curl [http://192.168.49.2:31845](http://192.168.49.2:31845/)
 
- ![](RackMultipart20230515-1-g0fvh5_html_9352b8e3d9337652.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/123fac48-f8ec-4659-a3d6-c5c7b0b88535)
 
  Now use port forward command to access service externally
  by using the commands
 
  $ kubectl port-forward --address 0.0.0.0 service/api-service 31845:3000
 
- ![](RackMultipart20230515-1-g0fvh5_html_8e29847bd505e722.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/f4315efa-eb87-44f0-86c8-d95bba95a562)
 
  Now open externalip:serviceport from browser to verify
 
 
 http:// 54.183.115.220:31845
 
- ![](RackMultipart20230515-1-g0fvh5_html_826681c80a793e3d.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/5bf1a9d6-e44f-42e1-b667-b37aae9de1da)
 
 # **Frontend**
 
 ## :
 
-
-![Shape1](RackMultipart20230515-1-g0fvh5_html_a892e8b0c0b96247.gif) **9. Deploying frontend**
+![image](https://github.com/arjunedify/Arjun/assets/132984407/b831a1c3-200e-47c8-afd8-f4e769e2abeb)
+**9. Deploying frontend**
 
 ##
  Before that update the .env file
 
  update the .env file of frontend that is web app
 
+![image](https://github.com/arjunedify/Arjun/assets/132984407/7d8323e1-8f71-4c07-8d80-515a2535494a)
 
- ![](RackMultipart20230515-1-g0fvh5_html_67a84f32bd8ee101.png)
 ##
 
  with url where our currenly backend is running on
 
  as shown in pic
 
-![](RackMultipart20230515-1-g0fvh5_html_826681c80a793e3d.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/88560da1-a252-4b75-b580-3eb0b24e1e40)
 
 Building the frontend image first
 
 $docker build –t mubeen507/frontend-lms .
 
- ![](RackMultipart20230515-1-g0fvh5_html_f8ae598d4aa40b57.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/e91ccb17-22aa-41af-8960-87ded1623241)
+
  and push hub docker
- ![](RackMultipart20230515-1-g0fvh5_html_66bc6ded8e178e83.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/cafdabec-ff09-4737-8d69-bf5093461519)
+
  Docker images
 
- ![](RackMultipart20230515-1-g0fvh5_html_fb10877fb3e0de09.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/bea8c87a-3d70-4871-9a47-b6bb3592cad3)
 
  ubuntu@ip-172-31-16-132:~/lms-public/webapp$ sudo vi frontend-deployment.yaml
 
@@ -463,7 +458,7 @@ value: production
 
 value: api-load-balancer-service
 
-![](RackMultipart20230515-1-g0fvh5_html_af6e7801b241ef96.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/4ceba6e9-86cf-4f7e-bd5c-abe201ac8995)
 
 
  Commands
@@ -494,25 +489,25 @@ selector:
 
 component: frontend
 
-![](RackMultipart20230515-1-g0fvh5_html_18627c3a2140bb4.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e90c9596-0516-4f47-b8e4-8328064bcd85)
 
 commands:
 
 
  $ minikube service frontend-nodeport-service --url
- ![](RackMultipart20230515-1-g0fvh5_html_8444dd3fc79bc3ea.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/bf1151aa-16cf-49ee-87a4-bfdd003eb502)
  Exposing frontend to outside world
 
  command :
 
  kubectl port-forward --address 0.0.0.0 service/frontend-nodeport-service 30633:80
 
- ![](RackMultipart20230515-1-g0fvh5_html_ee7aec46817dae06.png)
+ ![image](https://github.com/arjunedify/Arjun/assets/132984407/4e1858b7-4b8d-492b-b16b-6f328bb31d46)
 
 public ip address of minikube instance : nodeport number
 
  http://54.183.115.220:30633
 
- ![](RackMultipart20230515-1-g0fvh5_html_5b2666463d7b3214.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/c20e2041-ed24-4243-8049-8b4a4817db94)
 
 9 | Page
