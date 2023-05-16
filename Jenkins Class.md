@@ -40,17 +40,17 @@
 
 - If your tasks are repeatable i.e done in the same way over a time period, then **JENKINS can simply automate the repeatable process**.
 
-![](RackMultipart20230515-1-138bwu_html_d6abd4cb95d2299c.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/5b2e010b-d0e4-458b-ba76-bf326febd967)
 
 Example CICD for java application
 
- ![](RackMultipart20230515-1-138bwu_html_81f9527100a216ed.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/e11d08e7-ba4e-4905-a206-8a3fbfbc0880)
 
-![](RackMultipart20230515-1-138bwu_html_9152029d1b1244a0.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/56fbe305-d686-43f0-908b-48a9d1e24808)
 
-![](RackMultipart20230515-1-138bwu_html_5c923ee6c3d3e0d5.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/bf708b51-f953-4c3b-8f32-5204f4b8c5ab)
 
-![](RackMultipart20230515-1-138bwu_html_a1deb7d927e3446d.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/2c7f61b8-54a8-4637-877e-eb66d2e978e5)
 
 **Continuous Integration - CI**
 
@@ -58,7 +58,7 @@ Example CICD for java application
 
 - In Continuous Integration each check-in is then verified by an automated build, allowing everyone to detect and be notified of problems with the build immediately
 
-![](RackMultipart20230515-1-138bwu_html_3ac0692866f74e60.png)
+![image](https://github.com/arjunedify/Arjun/assets/132984407/55f1a84d-9eb6-43fd-888e-2536f6aa79aa)
 
 **Continuous Deployment - CD**
 
