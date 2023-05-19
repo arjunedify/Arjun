@@ -1,6 +1,7 @@
 **LMS-AWS-PIPELINE**
 
-![](RackMultipart20230519-1-5krc33_html_c4c9ea1d80fe0e82.jpg)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/b1e5e5cc-b61e-4e1c-a9d9-8a98552a5ba7)
+
 
 - For learning continuous integration and continuous delivery(CI/CD) via AWS CodePipeline purposes, we deploy a LMS Application.
 - The Application code is present in the below Github link
@@ -22,65 +23,63 @@ AWS service roles are used to grant permissions to an AWS service so it can acce
 
 Let's navigate to our AWS Management Console and search for [**IAM**](https://aws.amazon.com/iam/) service. Now create a new role for EC2 and AWS CodeDeploy:
 
-![](RackMultipart20230519-1-5krc33_html_e4f2e839922b2aad.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/c29bdd5d-ae4f-4b5b-b825-9b1e657530eb)
 
 Identity and Access Management (IAM) — Roles Dashboard
 
-![](RackMultipart20230519-1-5krc33_html_269d6f7ebb36488b.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ae8aaf9e-8d0a-4b9c-a2cf-1e63b54ae45b)
 
 Create a new role for EC2 and attach  **AmazonS3ReadOnlyAccess**  policy which will allow our EC2 instance to access stored artifacts from the [Amazon S3](https://aws.amazon.com/s3/) bucket.
 
-![](RackMultipart20230519-1-5krc33_html_b491d847ee60d608.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/af541c43-12d9-4f5e-b8b5-94c7a46620a7)
 
 Create a new service role for CodeDeploy and attach  **AWSCodeDeployRole**  policy which will provide the permissions for our service role to read tags of our EC2 instance, publish information to Amazon SNS topics and much [more](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-create-service-role.html)
 
-![](RackMultipart20230519-1-5krc33_html_4017239daa15034f.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/2061e5af-07ec-4707-9125-fa7532912c41)
 
-![](RackMultipart20230519-1-5krc33_html_f3695df62caadd72.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/18077f70-cce4-4e4f-b8ba-4e79e5bba821)
 
 **2. Launch an EC2 instance**
 
 Now, let's launch our EC2 instance! Under AWS Management Console, Click on the  **EC2 ** under  **Compute ** which ** ** will take us to the  **EC2 Dashboard**  page. Now click on _ **Launch Instance:** _
 
-![](RackMultipart20230519-1-5krc33_html_836736083eb6a8ef.png)
-
-![](RackMultipart20230519-1-5krc33_html_f233b1448e952df4.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/503648f6-590d-4393-9980-15208f55459a)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/b423d694-8378-4c26-8953-0bbdc12fe30d)
 
 **EC2 Dashboard**
 
-![](RackMultipart20230519-1-5krc33_html_de1a093a30d58c46.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/aae26d42-7269-4925-a9a4-641c1380c11d)
 
 We will choose  **Amazon Linux 2 AMI** as our** Amazon Machine Image(AMI)** for launching our instance
 
-![](RackMultipart20230519-1-5krc33_html_6ef424ef8f865924.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/5256c13b-31e9-469b-a54a-ec2189eb29ae)
 
 **Choose an Instance Type**
 
-![](RackMultipart20230519-1-5krc33_html_ed25d44184f228b5.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/9e35c6e1-31aa-465f-a19b-2bc35b5d5c1e)
 
 You can choose your default VPC (configured for you by AWS) next to  **Network. ** Also, choose the ** IAM role ** we created earlier for EC2 with  **AmazonS3ReadOnlyAccess ** policy ** ** attached
 
-![](RackMultipart20230519-1-5krc33_html_72031fc0b4b3f142.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/cb3e436f-bf18-491b-b90f-d4d3e70d57c6)
 
 Our instance will be launched with the above storage device settings. You can attach additional EBS volumes and instance store volumes to your instance, or edit the settings of the root volume.
 
-![](RackMultipart20230519-1-5krc33_html_75b663b393438a05.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/7e9cd983-9283-4d7d-97e9-9fe04e019351)
 
 To help you manage your instances, images, and other Amazon EC2 resources, you can optionally assign your own metadata to each resource in the form of [_ **tags** _](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)
 
-![](RackMultipart20230519-1-5krc33_html_3456a64ebbf741f1.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/088f79fa-1570-4d72-bb66-f8673cd28844)
 
-![](RackMultipart20230519-1-5krc33_html_ff638fc5f05dde94.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4cec2b46-3d60-49de-a1c6-66735011c382)
 
 On this page, you can add firewall rules to allow specific traffic to reach your instance
 
-![](RackMultipart20230519-1-5krc33_html_42776de67acfbb3e.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/2fe79aef-aa11-421e-a970-c5a3b7af6e68)
 
 Now you will be prompt to review your instance configuration and create a key pair which allows you to to [connect to your EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html). Use an existing key or create a new key pair and click ** Download Key Pair ** which will download .pem key to your PC. ** ** After downloading Key Pair, select _ **Launch Instances** _ and wait for your instance to be launched. You will now be able to click on _ **View Instances** _ to go back to your EC2 dashboard where you will see the instance up and running in just a few minutes.
 
-![](RackMultipart20230519-1-5krc33_html_571334682c2761d0.png)
-
-![](RackMultipart20230519-1-5krc33_html_6059df8d49bcdd2.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/da01209b-e528-4ede-bfd4-d33134f37b14)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/e43b1798-dca3-4ac3-9dcc-04c36d274cd8)
 
 Here we go, you've now successfully launched your EC2 instance
 
@@ -128,8 +127,7 @@ _bucket-name_ is the name of the Amazon S3 bucket that contains the CodeDeploy R
 - Check the status of the
 
 sudo service codedeploy-agent status
-
-![](RackMultipart20230519-1-5krc33_html_a33b342736937ac2.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/5e83ecb5-8b1f-4dc0-a408-feccf14e8e75)
 
 Create a CodePipeline using Github, CodeBuild and CodeDeploy
 
@@ -153,27 +151,27 @@ Step 1: CodePipeline
 
 Let's navigate to CodePipeline via AWS Management Console and click on  **Create pipeline:**
 
-![](RackMultipart20230519-1-5krc33_html_47766456a5959b01.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0a7ee78e-0050-468a-b703-421c3f7cfbac)
 
-![](RackMultipart20230519-1-5krc33_html_e4a73cc9a9178702.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f2f98df9-5595-4a16-afbd-919c73c99824)
 
-![](RackMultipart20230519-1-5krc33_html_6104af55131adc82.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0924da8f-8238-4b06-bc1f-2d545f1cd11b)
 
-![](RackMultipart20230519-1-5krc33_html_ceedddb8be360c70.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/844940e1-5a3f-4a40-a247-0a3a934b4007)
 
-![](RackMultipart20230519-1-5krc33_html_dc55ff0157ff26f2.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/bbee995a-8133-4512-b683-6329882789f4)
 
-![](RackMultipart20230519-1-5krc33_html_59d08be7fb8ee409.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/e3dee7a4-2b6b-4a3c-9295-fa86c61e04ca)
 
-![](RackMultipart20230519-1-5krc33_html_59d08be7fb8ee409.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/aacfea94-b80c-4fe3-88d8-3ee5652af260)
 
-![](RackMultipart20230519-1-5krc33_html_c7d285f864f585.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d621b92f-2920-4bed-afb5-8648427972c0)
 
-![](RackMultipart20230519-1-5krc33_html_34dcebedd2b9d3b0.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d5af06fd-b294-4ca6-812f-f272c73e0ea8)
 
-![](RackMultipart20230519-1-5krc33_html_6001eeb4f9932467.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/8565f563-3cb2-4fb1-a3db-1cfc5109de62)
 
-![](RackMultipart20230519-1-5krc33_html_c85f5a026913d139.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/5f8b5206-4c4e-435d-bbe7-beb905110083)
 
 \> vi **buildspec.yaml**
 
@@ -217,58 +215,56 @@ files:
 
 - dist/\*\*/\*
 
-![](RackMultipart20230519-1-5krc33_html_86d7e3715ea1aab8.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f26d603e-0992-4f8e-9928-2e26035131c3)
 
-![](RackMultipart20230519-1-5krc33_html_354c6f0d737f655a.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/c1f5e868-fc4b-4608-9280-5df5fbbf8ab7)
 
-![](RackMultipart20230519-1-5krc33_html_eca89fb07ea2e8ad.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/9e23c4fc-dfde-470a-831a-d253d3afae70)
 
-![](RackMultipart20230519-1-5krc33_html_6e21e79e1a11ee32.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1f0585b3-446f-41d7-9d9f-72ed16bc8847)
 
-![](RackMultipart20230519-1-5krc33_html_83be4144c840136.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/2b78901a-0a36-4fd1-b78e-9789bc564cbb)
 
 \> On left menu \> Click Deploy \> Applications (Open in new tab)
 
-![](RackMultipart20230519-1-5krc33_html_3a2f4216ba008cea.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/5ea509d8-ba92-46f5-8fe0-51436f8fda3a)
 
-![](RackMultipart20230519-1-5krc33_html_6f21ae4c1920656e.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0d7e6c32-f272-4877-a345-890566764990)
 
 \> Refresh the options by selecting Deploy Provider : (AWSAppConfig) \>
 
-![](RackMultipart20230519-1-5krc33_html_59136644b4907dde.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1a542940-09d6-47ee-970c-a12aee184632)
 
 \> Create Deployment Group
 
-![](RackMultipart20230519-1-5krc33_html_86ffa12f3f1bf809.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/64a6c10a-ada8-4b64-9ee6-4447032e8016)
 
-![](RackMultipart20230519-1-5krc33_html_9a51ba05347d3c30.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4dcab900-0a16-4ecf-93d8-cc84e84c19fe)
 
-![](RackMultipart20230519-1-5krc33_html_f3759365a2efee7f.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/941f0e46-6a3f-454e-a3f1-ac908a4318dc)
 
-![](RackMultipart20230519-1-5krc33_html_dbde4dfb821d145c.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/13d40510-8c72-4aeb-bc40-a7b9d57ca9fc)
 
-![](RackMultipart20230519-1-5krc33_html_c27ba0f568c6a9d1.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/9b654cd9-6251-4419-8f4d-d954a6e87147)
 
-![](RackMultipart20230519-1-5krc33_html_9e2918470d2946ec.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/fa07cfce-4f94-454b-97ed-ea0596b3cfdf)
 
-![](RackMultipart20230519-1-5krc33_html_a33b342736937ac2.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/10c6a340-011f-4956-8596-47a2a06f4d1c)
 
-![](RackMultipart20230519-1-5krc33_html_6f36580cd6de58b4.png)
-
-![](RackMultipart20230519-1-5krc33_html_b96c51a59209d5cc.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0c9f5818-ae9a-4779-bcf0-99cc40bcedb6)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d1a0fd59-ef04-4cae-88bd-6495be559eb8)
 
 \> Now go back to Codepipeline Page
 
 \> Refresh the options by selecting Deploy Provider : (AWSAppConfig) \>
 
-![](RackMultipart20230519-1-5krc33_html_a4ca73e1d837d03e.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/54f99c9a-0504-4827-9c85-b687ee359c12)
 
 \> Next \> Create Pipeline
 
-![](RackMultipart20230519-1-5krc33_html_b258d327eecba4c8.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/9c92b3b7-be34-417b-9689-f9e55853790c)
 
-![](RackMultipart20230519-1-5krc33_html_1b34f4da8a39fc01.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/2b451dec-e0d1-4817-b284-8107228e3b6d)
 
-![](RackMultipart20230519-1-5krc33_html_e1d22dd61fc0e4fa.png)
-
-![](RackMultipart20230519-1-5krc33_html_5e546c7e05f9aed.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0b312d3e-aeda-41c9-a004-172d5dad83e0)
+ 
