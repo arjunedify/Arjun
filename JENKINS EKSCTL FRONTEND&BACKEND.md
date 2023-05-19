@@ -66,28 +66,27 @@ The eks-role should have the following access
 
 [AWSCloudFormationFullAccess](https://us-east-1.console.aws.amazon.com/iam/home#/policies/arn:aws:iam::aws:policy/AWSCloudFormationFullAccess)
 
-![](RackMultipart20230519-1-3xue4s_html_e32d1a56e4df6768.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/631a9ce6-3f74-4fc5-ab49-d6fc9154e62a)
 
 - Attach the IAM role to the instance
 
-![](RackMultipart20230519-1-3xue4s_html_7a82452a585a4d04.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f2ec8c55-e1b0-4904-b7b4-630a090720ce)
 
 **Create the eks cluster:**
 
 **eksctl create cluster --name test-cluster --version 1.24 --region us-west-2 --nodegroup-name linux-node --node-type t2.medium --nodes 2**
 
-![](RackMultipart20230519-1-3xue4s_html_9aa7344e716dbd03.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/89b136dd-3924-432e-8861-149bead2d178)
 
 Now clone the code into the workstation
 
 - sudo git clone -b EKS -b [https://github.com/yellaiahgithub/lms-public.git](https://github.com/yellaiahgithub/lms-public.git)
 
-- ![](RackMultipart20230519-1-3xue4s_html_ba08bd92c1cd0999.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/94b9165a-1f4f-4ba0-970b-30feb1e4aa8c)
 
 - Change the directory to lms-public/k8s
 
-![](RackMultipart20230519-1-3xue4s_html_e654291d74444687.png)
-
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1569b690-d9f4-40a3-a7db-e9128d925fd9)
 [**api-deployment.yaml**](https://github.com/yellaiahgithub/lms-public/blob/EKS/k8s/api-deployment.yaml)
 
 apiVersion: apps/v1
@@ -347,22 +346,20 @@ kubectl create -f api-load-balancer-service.yaml
 - Now check the pods and services
 
 Kubectl get all
-
-![](RackMultipart20230519-1-3xue4s_html_9215438c77e95d38.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/65b0f3c1-5941-41e7-818e-92cfc74715b9)
 
 Now check the backend address
 
 http://[a389da76f9f8943c2827c6b071aaf444-885465126.us-west-2.elb.amazonaws.com:3000](http://a389da76f9f8943c2827c6b071aaf444-885465126.us-west-2.elb.amazonaws.com:3000/)
 
-![](RackMultipart20230519-1-3xue4s_html_1faed1793bcb8c6.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/9a5206fa-33b8-4a7a-bf69-96d3386523a3)
 
 - Now copy the backend url and paste in lms-public/webapp/.env file
-
-![](RackMultipart20230519-1-3xue4s_html_dcc87bb6ae96f725.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f7c975f8-4fa1-480f-8bad-4fbe1ccf14ca)
 
 - Now build the frontend docker image with the above backend\_url and push into dockerhub account ,Then from dockerhub account the frontend-deployment file will call the frontend image.
 
-![](RackMultipart20230519-1-3xue4s_html_ff437e00cdfa614.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4be3397c-8452-4620-a1f9-9c62090b3953)
 
 ## **frontend-deployment.yaml**
 
@@ -450,10 +447,10 @@ kubectl create -f frontend-load-balancer-service.yaml
 
 Kubectl get all
 
-![](RackMultipart20230519-1-3xue4s_html_3b82223e07c928b5.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/5f54f15f-963e-4ec7-b96a-4c971763ba6a)
 
 - Now check the deployment service url
 
 http://[a30114a1eaf5945de95285208d84d1d3-677222305.us-west-2.elb.amazonaws.com](http://a30114a1eaf5945de95285208d84d1d3-677222305.us-west-2.elb.amazonaws.com/)
 
-![](RackMultipart20230519-1-3xue4s_html_fd506c4c9f38286c.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/061bcbfd-6dd1-4c65-98f9-6b48eafb9800)
