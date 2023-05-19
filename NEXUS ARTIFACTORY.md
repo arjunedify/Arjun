@@ -17,21 +17,20 @@
 # Allow the Security ports of 8081,22,8080.
 -
 # Launch the instance and login into the server with Bash Terminal with public ip address
-
-![](RackMultipart20230519-1-25y7b0_html_787fbffc08127557.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4ac624a0-de2f-4fac-8274-cac17f6f0b32)
 
 -
 # Clone the Application code from the Github Repository
 
 git clone -b vm-docker-cicd [https://github.com/digitaledify/lms-public.git](https://github.com/digitaledify/lms-public.git)
 
-![](RackMultipart20230519-1-25y7b0_html_9810a984526e7343.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f2d551f2-8823-40a6-9c15-c9f08be617b5)
 
 - Install node 16 version in the ubuntu machine
 
 curl -fsSL https://deb.nodesource.com/setup\_16.x | sudo -E bash - &&sudo apt-get install -y nodejs
 
-![](RackMultipart20230519-1-25y7b0_html_128ea33c5aa829a5.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/220db3f1-def9-42ba-84ab-738161e9d0e0)
 
 - Change the directory to the lms-public/webapp
 - Build the frontend code with the following build commands
@@ -42,7 +41,7 @@ sudo npm run build
 
 - In the lms-public/webapp directory we will get the **dist** file ,which is our build Artifact.
 
-![](RackMultipart20230519-1-25y7b0_html_53af3641fef9631a.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1bdfd63d-06e9-4a7c-ad1c-4341a5706ee4)
 
 # **Install Docker on Ubuntu server:**
 
@@ -64,15 +63,15 @@ sudo useradd -aG docker $user
 
 docker run -d -p 8081:8081 --name nexus sonatype/nexus
 
-![](RackMultipart20230519-1-25y7b0_html_53b108bec508199e.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d8cf2373-fea4-4f8c-be56-34531ae4337f)
 
 - Browse the Nexus server by ip-address:8081 in Chrome
 
-![](RackMultipart20230519-1-25y7b0_html_f25d5dce1b656794.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/33982bdb-f91d-4e1b-b0af-d307cc26f0be)
 
 - Login into the server by admin name and password
 
-![](RackMultipart20230519-1-25y7b0_html_cbd003548122a9da.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4d4bff06-1619-4e23-89e0-b3fc8c0aadf7)
 
 - Default username is admin,Password need to copy from the container which is located in the
 
@@ -82,21 +81,21 @@ docker exec -it container id sh
 
 cat/nexus-data/admin.password
 
-![](RackMultipart20230519-1-25y7b0_html_51e0f27d5e83338.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/e63c08f8-5ca3-4902-88f9-b783e3d1923c)
 
 - Reset the password again with the new password
 
-![](RackMultipart20230519-1-25y7b0_html_596da0f4b7febade.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/01b25893-4fff-4f7c-8a53-dfe4923cb575)
 
 - Go to settings and create Repository
 
-![](RackMultipart20230519-1-25y7b0_html_9afca3172cf58752.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0fa13985-03c9-42a1-9a77-da69612907d8)
 
 - Create a Repository of lms-public and select raw hosted option
 
-![](RackMultipart20230519-1-25y7b0_html_1dc9febb48b2dedb.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/8c0e90e0-47cc-4b34-8602-3392c5334ac8)
 
-![](RackMultipart20230519-1-25y7b0_html_51ef5a30bd7d4e4.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/fefd8b28-f85e-4194-9891-4304d341dc92)
 
 - Zip the files which are there in the lms-public/webapp folder
 
@@ -111,15 +110,15 @@ admin == username of Nexus login
 
 1111111111@yY == password of Nexus login
 
-![](RackMultipart20230519-1-25y7b0_html_5c18f9fc8c697d7a.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/90589905-e430-4b0b-b5e4-210771beb2a0)
 
 - The dist.zip file is uploaded into the Nexus Repo
 
-![](RackMultipart20230519-1-25y7b0_html_729bbbcd4d78bb72.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/72922a8f-0d43-4ecd-a433-3c2fd0864142)
 
 - To download the files.zip Artifact from the Nexus Repository the following command need to run
 
-![](RackMultipart20230519-1-25y7b0_html_ec774d138916ce2.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/8123e184-ff51-49d6-931d-ee4b7b0f4740)
 
 wget --user admin --password 1111111111@yY [http://74.225.248.45:8081/repository/lms-public/files.zip](http://74.225.248.45:8081/repository/lms-public/files.zip)
 
@@ -133,7 +132,7 @@ NOTE:
 
 Files.zip path:[http://74.225.248.45:8081/repository/lms-public/files.zip](http://74.225.248.45:8081/repository/lms-public/files.zip)
 
-![](RackMultipart20230519-1-25y7b0_html_9bad901a6bad31c6.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/79fbebf2-49ec-41f3-9c1f-1488522330d0)
 
 - Finally we uploaded the Artifact from the server to the Nexus Repo
 
