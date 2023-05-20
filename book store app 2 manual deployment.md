@@ -52,8 +52,7 @@ use bookstore;
 
 CREATE TABLE books(id INT(11) NOT NULL AUTO\_INCREMENT PRIMARY KEY,book\_name VARCHAR (25) NOT NULL, book\_publisher VARCHAR (20),book\_price FLOAT);
 
-![](RackMultipart20230520-1-r5rmuj_html_bfc6a0ade6c33b08.png)
-
+![image](https://github.com/arjunedify/Arjun/assets/130965749/77b7d98d-9cca-4eaf-80d1-3dd76ae169e0)
 select database bookstore
 
 $ use bookstore;
@@ -61,14 +60,13 @@ $ use bookstore;
 Will display database changed
 
 $ show tables;
-
-![](RackMultipart20230520-1-r5rmuj_html_59c95cbcbc235ce0.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/6875647a-4bc4-4a44-b21c-77a8b16d4056)
 
 Now the database and tables are ready
 
 Goto app server and update the /src/db.php file with db name user name password and location of mysql database installed server ip as shown below.
 
-![](RackMultipart20230520-1-r5rmuj_html_108f32fb8be1332.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/2883f462-e327-45d1-b4a8-6207bc627525)
 
 Now in app server
 
