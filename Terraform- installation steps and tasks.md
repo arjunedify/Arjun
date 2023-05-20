@@ -1,6 +1,3 @@
-![Shape 2](RackMultipart20230520-1-ydqvai_html_12bdfb4349b113fb.gif)
-
-mubeen
 
 # Terraform Tasks
 
@@ -16,14 +13,12 @@ Installing terraform
 Download terraform from the following link
 
 [https://www.terraform.io/downloads](https://www.terraform.io/downloads)
-
-![](RackMultipart20230520-1-ydqvai_html_62d9f4239eecab33.png)
-
+![image](https://github.com/arjunedify/Arjun/assets/130965749/231167cd-ccfa-4e03-8f8e-21419c396ce2)
 Path setting for terraform
 
 Got the folder where you download the terraform copy the path and paste in the environment variables
 
-![](RackMultipart20230520-1-ydqvai_html_675e361deb25e039.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ed9d442e-983c-4b32-b340-a2402f33eab1)
 
 C:\Users\Abdul Mubeen\Downloads\terraform\_1.1.7\_windows\_386
 
@@ -31,41 +26,41 @@ Right click on my computer
 
 Select properties
 
-![](RackMultipart20230520-1-ydqvai_html_660572825d2abf49.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/c8c1433d-4623-4346-95ca-eb25ce8e0015)
 
 Then goto ![](RackMultipart20230520-1-ydqvai_html_133d13c6d8d4b2a0.png)
 
-![](RackMultipart20230520-1-ydqvai_html_da3e77f3ea7a80c5.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/c8e4dd76-da01-4702-a55b-3f60a907c8e0)
 
 After downloading terraform check version by command
 
 $terraform -version
 
-![](RackMultipart20230520-1-ydqvai_html_c793cabebfce9f18.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f7ea7a23-5f4a-4c1e-8a19-2fb1ccee6e5b)
 
 Create IAM user and download access key and secret key for it
 
 Create main.tf
 
-![](RackMultipart20230520-1-ydqvai_html_d427394227ff1c37.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/83b310ca-55ad-45f7-855d-30d52db8dad9)
 
 Proving aws credentials first that access key and secret key and create a vpc
 
 Then initialized
 
-![](RackMultipart20230520-1-ydqvai_html_346f8e692d0c8880.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/7afb5681-d209-4368-aa25-0f8ebd4af8dc)
 
 **\>terraform fmt**
 
 To align the code as per terraform requirement.
 
-![](RackMultipart20230520-1-ydqvai_html_ddc292cb860b0d03.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1b0f9561-b4c4-4cc1-ba5d-cccfef7c5460)
 
 Then
 
 \> **terraform plan**
 
-![](RackMultipart20230520-1-ydqvai_html_899c8e0685100a3d.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ccc1d99a-c752-419d-aa5c-a85a33ac0063)
 
 This terraform plan will display what is going to add and destroy resources
 
@@ -73,11 +68,11 @@ Finally create by using the command
 
 **\> terraform apply**
 
-![](RackMultipart20230520-1-ydqvai_html_1ad9190df1dadcf3.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/440a03d0-8edf-4f49-acfe-8fab19fa7f5b)
 
 Vpc is created successfully in aws infra.
 
-![](RackMultipart20230520-1-ydqvai_html_d63fbc568e5368b.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f2ce6217-a74a-4dca-a9dc-0fc3dcacefef)
 
 Task 2
 
@@ -91,21 +86,20 @@ Creating vpc same as above task 1
 
 Creating subnets 2 public subnets
 
-![](RackMultipart20230520-1-ydqvai_html_1af3a121cbbf6dad.png)
-
-![](RackMultipart20230520-1-ydqvai_html_a1fe6c080a091f65.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d01f65dd-d40e-486b-9b3e-e4a9b7c27a9e)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0b330123-6936-4a2c-bf86-9b1d5effd409)
 
 Creating private subnets
 
-![](RackMultipart20230520-1-ydqvai_html_9c2c34d0f6b02aa4.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/a2db98c9-164c-4d51-bf56-3a3a065f261b)
 
 - **Terraform fmt**
 - **Terraform plan**
 - **Terraform apply**
 
-![](RackMultipart20230520-1-ydqvai_html_6b1312f4207777dd.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1c31fe18-0773-4329-aaff-907404d505d8)
 
-![](RackMultipart20230520-1-ydqvai_html_f817c44edf03d8b9.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/55f78cf2-6372-4dab-aa1a-8436f409cd75)
 
 Task 3
 
@@ -117,35 +111,33 @@ Create VPC, 4 subnets configure route table, internet gateway, NACL, 4 Ec2 & Sec
 
 Create VPC using the following terraform script
 
-![](RackMultipart20230520-1-ydqvai_html_31d377cc0c17b910.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ae20438a-80a1-4121-bd4f-4da54cd27ae2)
 
 Creating internet gateway
 
-![](RackMultipart20230520-1-ydqvai_html_6e084588cad758b3.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/29061a38-cb25-4308-bb32-7e2118af635c)
 
-![](RackMultipart20230520-1-ydqvai_html_53e8d530b04543d5.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/1d7cdfc8-d710-4ecb-8517-60a5dc8002fc)
 
 Creating to 2- Pub subnet and installing Ec2 in each subnet
-
-![](RackMultipart20230520-1-ydqvai_html_f8b8d4bbe0350b4.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ebd1acdf-6723-4946-906d-8e864ba0002b)
 
 First instance
 
-![](RackMultipart20230520-1-ydqvai_html_58ea40fa72a7f7ae.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/7015c7c0-1270-47c3-a7d3-61a4b8bc95cc)
 
-![](RackMultipart20230520-1-ydqvai_html_736569770f4f7921.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/cd68616a-61be-4ffa-880c-3277d83cd445)
 
  Creating Security group digitalLync\_sg
 
-![](RackMultipart20230520-1-ydqvai_html_e4da63eda377583c.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/0d576523-d685-45e2-9463-fd8d8e120b21)
 
 Now creating 2- Pvt subnet install 1 Ec2 in each subnet
-
-![](RackMultipart20230520-1-ydqvai_html_bb0a41585a23d694.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/4eb892b2-49f4-4802-8cf9-b99bcb6587d6)
 
 Instance in pvt subnet same as above but instead of public subnet select pvt subnet
 
-![](RackMultipart20230520-1-ydqvai_html_955ecb6dac549cb8.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/ddc287bd-674a-446c-a6ae-3729e1524a45)
 
 Task 4
 
@@ -155,9 +147,9 @@ Solution:
 
 Virialized using var.tf calling variable from main.tf instead of directly declaring
 
-![](RackMultipart20230520-1-ydqvai_html_66da82359cc51cb7.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/f925d9bb-c6e6-4cd9-b39d-14f97a4ba404)
 
-![](RackMultipart20230520-1-ydqvai_html_f9951603dbb61e7d.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/b217b8d8-627c-4edf-8fcc-b77ba62d33d3)
 
 Main.tf file
 
@@ -431,4 +423,4 @@ vpc\_security\_group\_ids = [aws\_security\_group.digitalLync\_sg.id]
 
 }
 
-![](RackMultipart20230520-1-ydqvai_html_f1032298b1fbf6a6.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/e1fad663-ac87-437f-bf86-dd96424109b7)
