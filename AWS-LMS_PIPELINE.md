@@ -88,9 +88,9 @@ Now connect to your EC2 instance by following instructions in [this](https://doc
 **For Ubuntu**
 
 [https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html)
-
+```
 \> sudo apt update -y
-
+```
 \> sudo apt install ruby-full -y
 
 \> sudo apt install wget -y
