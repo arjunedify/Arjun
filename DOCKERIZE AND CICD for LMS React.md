@@ -60,31 +60,33 @@ $ sudo app
 Installation commands
 
 url -f
-
-# curl -fsSL https://get.docker.com -o get-docker.sh
-
-# sh get-docker.sh
-
+```
+ curl -fsSL https://get.docker.com -o get-docker.sh
+```
+```
+sh get-docker.sh
+```
 Starting Docker Service
-
-# sudo systemctl start docker
-
+```
+ sudo systemctl start docker
+```
 Enabling Docker Service
-
-# sudo systemctl enable docker
-
+```
+ sudo systemctl enable docker
+```
 (adding centos user to docker group)
-
-# sudo usermod -aG docker ubuntu
-
-# newgrp docker
-
+```
+ sudo usermod -aG docker ubuntu
+```
+```
+ newgrp docker
+```
 # **Creating docker network**
 
 commad to create a docker network
-
-# docker network create -d bridge lmsnetwork
-
+```
+docker network create -d bridge lmsnetwork
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/e21d0478-becf-4cad-a865-4ee0ce9a1f1f)
 
 **Goto another instance that MASTER (jenkins server)**
@@ -92,21 +94,24 @@ commad to create a docker network
 Installing Jenkins server
 
 [www.jenkins.io](http://www.jenkins.io/)
-
+```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee\
 
 /usr/share/keyrings/jenkins-keyring.asc **\>** /dev/null
-
+```
+```
 echo deb **[**signed-by **=** /usr/share/keyrings/jenkins-keyring.asc] \
 
 https://pkg.jenkins.io/debian-stable binary/ | sudo tee\
 
 /etc/apt/sources.list.d/jenkins.list **\>** /dev/null
-
+```
+```
 sudo apt-get update
-
+```
+```
 sudo apt-get install jenkins
-
+```
 login to Jenkins server and install suggested plugins
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/ed06f646-b424-4332-a822-4883b0ce247b)
@@ -134,9 +139,9 @@ Now add user
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/9ec86b12-0690-4d67-982a-4230ed5e6de0)
 
 Note : In slave install Java 11 as Jenkins required
-
+```
 sudo apt install openjdk-11-jre
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/df15243e-de3d-4549-8771-73fa6435abd4)
 
 Now Master slave configuration is completed
@@ -156,7 +161,7 @@ Done with configuration of master and slave
 Now configuring Backend pipeline
 
  Now create a jenkins file that is [mubeen507](https://github.com/mubeen507)/[**lmsreactproject**](https://github.com/mubeen507/lmsreactproject) **/** api/Jenkinsfile-docker-backend in your git hub repository
-
+```
 Jenkins file
 
 pipeline {
@@ -248,6 +253,7 @@ sh 'docker run -d -p 8080:8080 --network lmsnetwork -e DATABASE\_URL=postgresql:
 }
 
 }
+```
 
 Configure docker hub credentials
 
@@ -279,9 +285,8 @@ Note : to build frontend our backend should be up and running .
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/383f3444-3ba1-4489-a5f8-8c767e56e155)
 
 Now add jenkins files at in frontend /webapp/nameof jenkinsfile
-
+```
 Jenkinsfile for frontend
-
 pipeline {
 
 agent {
@@ -357,7 +362,7 @@ sh 'docker run -dt -p 8000:80 --name fe mubeen507/frontend-lms'
 }
 
 }
-
+```
 Update user credential of docker user (example dockeruser )jenkinsfile
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/b12dbad0-5a4c-4074-a138-e6cfbc564130)
