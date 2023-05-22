@@ -6,13 +6,22 @@
 - For ex: I have launched 2 food websites using Httpd (port: 80)
 - Then open Gitbash to so that we can add apache httpd server to the instance.
 - We can use below commands to set up httpd and clone from git.
-
+```
 - Sudo yum -y install httpd
+```
+```
 - Sudo systemctl start httpd
+```
+```
 - Sudo systemctl enable httpd
+```
 - To check whether httpd working or not use: sudo systemctl status httpd
+- ```
 - Sudo yum -y install git
+- ```
+- ```
 - sudo git clone [https://github.com/ravi2krishna/food.git](https://github.com/ravi2krishna/food.git) (from git rep) /var/www/html (document root)
+- ```
 - now to the website to see the final result.
 
 - Now create another instance, so that we can create a load balancer.
