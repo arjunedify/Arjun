@@ -91,42 +91,62 @@ Now connect to your EC2 instance by following instructions in [this](https://doc
 ```
 \> sudo apt update -y
 ```
+```
 \> sudo apt install ruby-full -y
-
+```
+```
 \> sudo apt install wget -y
-
+```
+```
 \> cd /home/ubuntu
-
+```
 \> wget [https://](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)[**bucket-name**](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)[.s3.](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)[**region-identifier**](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)[.amazonaws.com/latest/install](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)
 
 \> wget [https://](https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install)[aws-codedeploy-us-east-2](https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install)[.s3.us-east-2.amazonaws.com/latest/install](https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install)
-
+```
 \> chmod +x ./install
-
+```
+```
 \> sudo ./install auto
-
+```
+```
 \> sudo service codedeploy-agent status
-
+```
+```
 \> sudo service codedeploy-agent start
-
+```
+```
 \> sudo service codedeploy-agent status
-
+```
 **For AMAZON / CENTOS**
-
+```
 sudo yum update
+```
+```
  sudo yum install ruby
+ ```
+ ```
  sudo yum install wget
-
+```
+```
 cd /home/ec2-user
+```
+```
  wget [https://bucket-name.s3.region-identifier.amazonaws.com/latest/install](https://bucket-name.s3.region-identifier.amazonaws.com/latest/install)
+```
 
 _bucket-name_ is the name of the Amazon S3 bucket that contains the CodeDeploy Resource Kit files for your region. _region-identifier_ is the identifier for your region. For example, for the US East (Ohio) Region, replace _bucket-name_ with aws-codedeploy-us-east-2 and replace _region-identifier_ with us-east-2.
+```
  chmod +x ./install
+ ```
+ ```
  sudo ./install auto
+ ```
 
 - Check the status of the
-
+```
 sudo service codedeploy-agent status
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/5e83ecb5-8b1f-4dc0-a408-feccf14e8e75)
 
 Create a CodePipeline using Github, CodeBuild and CodeDeploy
@@ -174,7 +194,7 @@ Let's navigate to CodePipeline via AWS Management Console and click on  **Create
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/5f8b5206-4c4e-435d-bbe7-beb905110083)
 
 \> vi **buildspec.yaml**
-
+```
 version: 0.2
 
 phases:
@@ -214,7 +234,7 @@ files:
 - scripts/\*\*/\*
 
 - dist/\*\*/\*
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/f26d603e-0992-4f8e-9928-2e26035131c3)
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/c1f5e868-fc4b-4608-9280-5df5fbbf8ab7)
