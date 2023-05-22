@@ -26,28 +26,29 @@ switch the branch
 write docker files
 
 Create a network
-
- $ docker network create -d bridge lmsnetwork
-
+```
+  docker network create -d bridge lmsnetwork
+```
 # **Creating a database container first**
-
- $docker run -d -p 5432:5432 --network lmsnetwork -e POSTGRES\_PASSWORD=password --name lmsdb postgres
-
+```
+ docker run -d -p 5432:5432 --network lmsnetwork -e POSTGRES\_PASSWORD=password --name lmsdb postgres
+```
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/ea307aaf-0bcc-47bb-a7a7-ed728394dce5)
 
 Building backend image and running backed service
 
 Naviage to backend folder
-
- $cd api
-
- $docker build -t mubeen507/lms-backend .
-
+```
+ cd api
+```
+```
+ docker build -t mubeen507/lms-backend .
+```
 Running a Backend container
-
-$ docker run -d -p 8080:8080 --network lmsnetwork -e DATABASE\_URL=[postgresql://postgres:password@lmsdb:5432/postgres](postgresql://postgres:password@lmsdb:5432/postgres) --name backend -e PORT=8080 -e MODE=local mubeen507/ lms-backend
-
+```
+docker run -d -p 8080:8080 --network lmsnetwork -e DATABASE\_URL=[postgresql://postgres:password@lmsdb:5432/postgres](postgresql://postgres:password@lmsdb:5432/postgres) --name backend -e PORT=8080 -e MODE=local mubeen507/ lms-backend
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/ebaf4297-1c72-4337-9104-13369abc8907)
 
 Testing backend service is running
@@ -71,7 +72,7 @@ Add backend url in .env of webapp
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/8c58adac-3806-44bf-b67c-5dfcbc186ba2)
 
 Now running the lms-frontend image
-
+```
  docker run -dt -p 80:80 mubeen507/lms-frontend
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/f96723c8-9e7f-4be3-8d80-e0f0b073e204)
