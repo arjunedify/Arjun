@@ -6,7 +6,7 @@
 - For ex: I have launched 2 food websites using Httpd (port: 80)
 - Then open Gitbash to so that we can add apache httpd server to the instance.
 - We can use below commands to set up httpd and clone from git.
- ```
+-  ```
 - Sudo yum -y install httpd
 - ```
 - Sudo systemctl start httpd
