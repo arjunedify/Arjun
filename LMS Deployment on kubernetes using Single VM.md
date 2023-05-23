@@ -31,8 +31,10 @@ Yamls file Required backend and database
 Images required and push the image to docker hub
 
 **1. Backend image**
+```
+ docker build -t k8s-backend .
 
- $docker build -t k8s-backend .
+```
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/d3bec4fa-f59a-4361-b6f7-c8379964628c)
 
@@ -45,7 +47,7 @@ Images required and push the image to docker hub
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/cc0102b0-db5e-4e7a-8df9-d9c2890dfeec)
 
 **3. Create a persistant volume**
-
+```
  apiVersion: v1
 
 kind: PersistentVolumeClaim
@@ -101,7 +103,7 @@ accessModes:
 hostPath:
 
 path: "/mtd/data" # Sets the volume's path
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/6475c002-47f4-454a-af5b-70fbcbf579bf)
  Commands to create :
 kubectl create –f database-persistent-volume.yaml
@@ -111,7 +113,7 @@ kubectl create –f database-persistent-volume.yaml
 
 
  ubuntu@ip-172-31-16-132:~/lms-public/api$ cat postgres-deployment.yaml
-
+```
 apiVersion: apps/v1
 
 kind: Deployment
@@ -173,17 +175,18 @@ env:
 - name: POSTGRES\_PASSWORD
 
 value: password
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/696a7da3-8922-4f8b-a99c-d9ab2ecf3d26)
 
 
 Commands to create:
-
-$ kubectl create –f postgres-deployment.yaml
-
+```
+kubectl create –f postgres-deployment.yaml
+```
 **5. Create service for postgres service**
 
  ubuntu@ip-172-31-16-132:~/lms-public/api$ cat postgres-cluster-ip-service.yaml
-
+```
 apiVersion: v1
 
 kind: Service
@@ -205,17 +208,17 @@ ports:
 - port: 5432
 
 targetPort: 5432
-
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/6f57269d-c8e9-47e3-91fe-943dc2f0686a)
 
  commands:
-
- $ kubectl create –f postgres-cluster-ip-service.yaml
-
+```
+ kubectl create –f postgres-cluster-ip-service.yaml
+```
 **6 . Create Backend deployment file**
 
  ubuntu@ip-172-31-16-132:~/lms-public/api$ cat api-deployment.yaml
-
+```
 apiVersion: apps/v1
 
 kind: Deployment
@@ -285,17 +288,18 @@ value: postgres
 - name: DB\_PASSWORD
 
 value: password
+```
 
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/615fe9e6-9598-4300-b89b-10a9c1db4b3f)
 
  commands:
-
+```
  kubectl create –f api-deployment.yaml
-
+```
 **7. Create the service for backend**
 
 ubuntu@ip-172-31-16-132:~/lms-public/api$ cat api-load-balancer-service.yaml
-
+```
 apiVersion: v1
 
 kind: Service
@@ -319,12 +323,14 @@ port: 3000
 targetPort: 3000
 
 type: NodePort
+```
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/d9ab31e9-5108-4bad-bf9b-fc5554544b3c)
 
  Command :
+ ```
  kubectl create –f api-load-balancer-service.yaml
-
+```
 **Step 8. Verify(postgres and backend ) with commands**
 
 ##
@@ -334,16 +340,17 @@ type: NodePort
 
 
  Commands
-
+```
  kubectl get all
-
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/be6dcbf3-58ae-48f6-b5c2-bdf5e45e429f)
 
 
  Get the backend url
  Command :
+ ```
  minikube service api-service –url
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/1087f89f-15a1-4d27-ac86-3907eea1e963)
 
 
@@ -357,9 +364,9 @@ Open the port in security group from 30000 to 32767
 
  Now use port forward command to access service externally
  by using the commands
-
- $ kubectl port-forward --address 0.0.0.0 service/api-service 31845:3000
-
+```
+  kubectl port-forward --address 0.0.0.0 service/api-service 31845:3000
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/f4315efa-eb87-44f0-86c8-d95bba95a562)
 
  Now open externalip:serviceport from browser to verify
@@ -392,9 +399,9 @@ http:// 54.183.115.220:31845
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/88560da1-a252-4b75-b580-3eb0b24e1e40)
 
 Building the frontend image first
-
-$docker build –t mubeen507/frontend-lms .
-
+```
+docker build –t mubeen507/frontend-lms .
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/e91ccb17-22aa-41af-8960-87ded1623241)
 
  and push hub docker
@@ -407,7 +414,7 @@ $docker build –t mubeen507/frontend-lms .
  ubuntu@ip-172-31-16-132:~/lms-public/webapp$ sudo vi frontend-deployment.yaml
 
 ubuntu@ip-172-31-16-132:~/lms-public/webapp$ cat frontend-deployment.yaml
-
+```
 apiVersion: apps/v1
 
 kind: Deployment
@@ -457,16 +464,16 @@ value: production
 - name: VITE\_API\_URL
 
 value: api-load-balancer-service
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/4ceba6e9-86cf-4f7e-bd5c-abe201ac8995)
 
 
  Commands
-
+```
  kubectl create –f frontend-deployment.yaml
-
+```
 **10 . create service for frontend**
-
+```
  apiVersion: v1
 
 kind: Service
@@ -488,20 +495,23 @@ targetPort: 80
 selector:
 
 component: frontend
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/e90c9596-0516-4f47-b8e4-8328064bcd85)
 
 commands:
 
-
- $ minikube service frontend-nodeport-service --url
+```
+  minikube service frontend-nodeport-service --url
+  
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/bf1151aa-16cf-49ee-87a4-bfdd003eb502)
  Exposing frontend to outside world
 
  command :
-
+```
  kubectl port-forward --address 0.0.0.0 service/frontend-nodeport-service 30633:80
-
+ 
+```
  ![image](https://github.com/arjunedify/Arjun/assets/132984407/4e1858b7-4b8d-492b-b16b-6f328bb31d46)
 
 public ip address of minikube instance : nodeport number
