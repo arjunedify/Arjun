@@ -22,8 +22,10 @@ and EKS(pass service)(master will be managed by aws)
 1. After creating buckets expose the bucket using expose command
 2. ![image](https://github.com/arjunedify/Arjun/assets/132984407/3316be18-d119-4e23-ad32-cf700d7868bf)
 
-Now create a cluster with kops$ kops create cluster --state=s3://kubernetestestbucket --zones=us-east-1a,us-east-1b --node-count=2 --name=test.k8s.local
-
+Now create a cluster with kops$ 
+```
+kops create cluster --state=s3://kubernetestestbucket --zones=us-east-1a,us-east-1b --node-count=2 --name=test.k8s.local
+```
 1. ![image](https://github.com/arjunedify/Arjun/assets/132984407/39661e8c-b349-45b0-b922-704df5c823d7)
 
 1. Now press Up arrow - - yes
@@ -36,7 +38,8 @@ Now create a cluster with kops$ kops create cluster --state=s3://kubernetestestb
 
 1. ![image](https://github.com/arjunedify/Arjun/assets/132984407/de70d1f8-85c0-4c26-88be-221b2792e39d)
 
-1. **$cat .kube/config**
+```cat .kube/config
+```
 
 **Copy from api version to ……**
 
