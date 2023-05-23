@@ -37,8 +37,8 @@ kops create cluster --state=s3://kubernetestestbucket --zones=us-east-1a,us-east
 1. to check nodes after creation of cluster
 
 1. ![image](https://github.com/arjunedify/Arjun/assets/132984407/de70d1f8-85c0-4c26-88be-221b2792e39d)
-
-```cat .kube/config
+```
+cat .kube/config
 ```
 
 **Copy from api version to ……**
