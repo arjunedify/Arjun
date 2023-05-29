@@ -25,12 +25,19 @@ DOCKER
 # _Brief review about project_
 
 1.We need to two instance one for master (jenkins) and Slave (docker container)_
+
 2.Docker installed in slave Server(ubuntu)_
+
 3.Jenkins as Master in server (ubuntu)_
+
 4.In Docker slave server install docker, java11 and create a docker network with name lmsnetwork_
+
 5.In Jenkins Master server configure node as docker server as slave_
+
 6.In Jenkins server create pipeline backend pipeline and test backend it should be up and running._
+
 7.Once the backend is running Update the backend url in frontend in frontend /webapp .env file._
+
 8.Now create a Frontend pipeline ._
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/5d12bccb-87b9-43e2-a7f4-677f39eb48cc)
