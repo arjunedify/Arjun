@@ -25,7 +25,7 @@ DOCKER
 # _Brief review about project_
 
 1.
-# _We need to two instance one for master (jenkins) and Slave (docker container)_
+### _We need to two instance one for master (jenkins) and Slave (docker container)_
 2.
 # _Docker installed in slave Server(ubuntu)_
 3.
