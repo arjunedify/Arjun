@@ -55,26 +55,36 @@ Repository is like a folder or directory that contains all the files and code re
 
 - The **git push** command - The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo.
 ```
-gitconfig--globaluser.name"kona"
-
-gitconfig--globaluser.email"kona@konalms.com"
-
-gitStatus
-
-git --version
-
-git add
-
-git commit -m "Message"
-
+git config --global user.name "kona"
+```
+```
+git config --global user.email "kona@konalms.com"
+```
+```
 git status
-
+```
+```
+git --version
+```
+```
+git add
+```
+```
+git commit -m "Message"
+```
+```
+git status
+```
+```
 git config --list
-
+```
+```
 git pull
-
+```
+```
 git push
-
+```
+```
 git remote set-url origin git@github.com:digital-edify/lms-public.git
 ```
 
