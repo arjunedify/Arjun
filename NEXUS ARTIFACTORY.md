@@ -22,7 +22,7 @@
 -
 # Clone the Application code from the Github Repository
 ```
-git clone -b vm-docker-cicd [https://github.com/digitaledify/lms-public.git](https://github.com/digitaledify/lms-public.git)
+git clone -b vm-docker-cicd https://github.com/digitaledify/lms-public.githt tps://github.com/digitaledify/lms-public.git
 ```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/f2d551f2-8823-40a6-9c15-c9f08be617b5)
 
@@ -110,7 +110,7 @@ azureuser@Nexus:~/lms-public/webapp$ zip dist.zip dist
 - By the above command we will get the zip file of the dist.zip
 - From the Server we need to push the Artifact into the Nexus Repository
 ```
-curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/]
+curl -v -u admin:1111111111@yY --upload-file dist.zip http://74.225.248.45:8081/repository/lms-public/
 ```
 admin == username of Nexus login
 
@@ -126,10 +126,10 @@ admin == username of Nexus login
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/8123e184-ff51-49d6-931d-ee4b7b0f4740)
 ```
-wget --user admin --password 1111111111@yY [http://74.225.248.45:8081/repository/lms-public/files.zip](http://74.225.248.45:8081/repository/lms-public/files.zip)
+wget --user admin --password 1111111111@yY http://74.225.248.45:8081/repository/lms-public/files.zip http://74.225.248.45:8081/repository/lms-public/files.zip
 ```
 ```
-curl -u admin:Admin123\* -X GET '[http://20.172.187.108:8081/repository/lms/dist-1.1.zip](http://20.172.187.108:8081/repository/lms/dist-1.1.zip)' --output dist-1.1.zip.
+curl -u admin:Admin123\* -X GET 'http://20.172.187.108:8081/repository/lms/dist-1.1.zip http://20.172.187.108:8081/repository/lms/dist-1.1.zip' --output dist-1.1.zip.
 ```
 admin == username of Nexus login
 
@@ -137,15 +137,15 @@ admin == username of Nexus login
 
 NOTE:
 
-Files.zip path:[http://74.225.248.45:8081/repository/lms-public/files.zip](http://74.225.248.45:8081/repository/lms-public/files.zip)
+Files.zip path:http://74.225.248.45:8081/repository/lms-public/files.zipht tp://74.225.248.45:8081/repository/lms-public/files.zip
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/79fbebf2-49ec-41f3-9c1f-1488522330d0)
 
 - Finally we uploaded the Artifact from the server to the Nexus Repo
 ```
-curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/](http://74.225.248.45:8081/repository/lms-public/)
+curl -v -u admin:1111111111@yY --upload-file dist.zip http://74.225.248.45:8081/repository/lms-public/ http://74.225.248.45:8081/repository/lms-public/
 ```
 - Dowloaded the Articact from the Nexus Repo to the server
 ```
-curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/](http://74.225.248.45:8081/repository/lms-public/)
+curl -v -u admin:1111111111@yY --upload-file dist.zip http://74.225.248.45:8081/repository/lms-public/ http://74.225.248.45:8081/repository/lms-public/
 ```
