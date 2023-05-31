@@ -5,9 +5,9 @@
 The [pwd](https://www.javatpoint.com/linux-pwd) command is used to display the location of the current working directory.
 
 **Syntax:**
-
+```
 pwd
-
+```
 2. mkdir Command
 
 The mkdir command is used to create a new directory under any directory.
@@ -168,25 +168,25 @@ This command tells about the users who are logged in and what are they doing.
 Syntax: w
 
 To create a new user by useradd command, execute the useradd command followed by username as follows:
-
-1. sudo useradd mubeen
-
+```
+sudo useradd mubeen
+```
 To set the password for the newly created user, execute the below command:
-
-1. sudo passwd  mubeen
-
+```
+sudo passwd  mubeen
+```
 The su command allows you to run a shell as another user.
 
 **Syntax:**
-
-1. su  **\<**** username ****\>**
-
+```
+ su  **\<**** username ****\>**
+```
 **Command line tools**  includes commands like useradd, userdel, passwd, etc. These are mostly used by the server administrators.
 
 Third and very rare tool is to  **edit the local configuration files**  directly using vi.
-
-1. /etc/passwd
-
+```
+  /etc/passwd
+```
 #
 # **Vi Editor with Commands**
 
