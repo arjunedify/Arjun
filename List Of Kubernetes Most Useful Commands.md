@@ -5,100 +5,98 @@
 1.
 # Pods
 ```
-kubectlgetpods
+kubectl get pods
 ```
 ```
-kubectlgetpods—all-namespaces
+kubectl get pods —all-namespaces
 ```
 ```
- kubectlgetpodmonkey-owide
+ kubectl get podmonkey -o wide
 ```
 ```
- kubectlgetpodmonkey-oyaml
+ kubectl get podmonkey -o yaml
 ```
 ```
- kubectldescribepodmonkey
+ kubectl describe pod monkey
 ```
 1.
 # CreateDeployments
 
 _ **Create** __**single**__ **deployment:** _
 ```
-kubectlrunmonkey—image=monkey—record
+kubectl run monkey —image=monkey —record
 ```
 1.
 # ScalingPODs
 ```
-kubectlscaledeployment/POD\_NAME—replicas=N
+kubectl scale deployment/POD-NAME —replicas=N
 ```
 1.
 # PODUpgradeandhistoryListhistoryofdeployments:
 ```
-kubectlrollouthistorydeployment/DEPLOYMENT\_NAME
+kubectl rollout history deployment/DEPLOYMENT-NAME
 ```
 # Jumptospecificrevision:
 ```
-kubectlrolloutundodeployment/DEPLOYMENT\_NAME—to-revision=N
+kubectl rollout undo deployment/DEPLOYMENT-NAME —to-revision=N
 ```
 1.
 # Services
 
 _ **List** __ **services:** _
 ```
-kubectlgetservices
+kubectl get services
 ```
 # ExposePODsasservices(createsendpoints)
 ```
-kubectlexposedeployment/monkey—port=2001—
+kubectl expose deployment/monkey —port=2001 —type=NodePort
 ```
-type=NodePort
-
 1.
 # Volumes
 
 _ **List** __**Persistent**__ **Volumes** __**and**__ **Persistent** __**Volumes**__ **Claims:** _
 ```
-kubectlgetpv
+kubectl get pv
 ```
 ```
-kubectlgetpvc
+kubectl get pvc
 ```
 1.
 # Secrets
 
 _ **List** __**Persistent**__ **Volumes** __**and**__ **Persistent** __**Volumes**__ **Claims:** _
 ```
-kubectlgetsecrets
+kubectl get secrets
 ```
 ```
-kubectlcreatesecretgeneric—help
+kubectl create secret generic —help
 ```
 ```
-kubectlcreatesecretgenericmysql—from-literal=password=root
+kubectl create secret generic mysql --from-literal=password=root
 ```
 ```
-kubectlgetsecretsmysql-oyaml
+kubectl get secrets mysql -o yaml
 ```
 1.
 # ConfigMaps
 
 _ **List** __**Persistent**__ **Volumes** __**and**__ **Persistent** __**Volumes**__ **Claims:** _
 ```
-kubectlcreateconfigmapfoobar—from-file=config.js
+kubectl create configmap foobar --from-file=config.js
 ```
 ```
-kubectlgetconfigmapfoobar-oyaml
+kubectl get configmap foobar-oyaml
 ```
 1.
 # DNS
 
 _ **List** __ **DNS-PODs:** _
 ```
-kubectlgetpods—all-namespaces|grepdns
+kubectl get pods --all-namespaces | grep dns
 ```
 # CheckDNSforpodnginx(assumingabusyboxPOD/containerisrunning)
 ```
-kubectlexec-tibusybox—nslookupnginx
+kubectl exec -ti busybox—nslookupnginx
 ```
 **Note:** kube-proxyrunningintheworkernodesmanageservicesandsetiptablesrulestodirecttraffic.
 
@@ -107,73 +105,70 @@ kubectlexec-tibusybox—nslookupnginx
 
 _ **List** __ **DNS-PODs:** _
 ```
-kubectlgetingress
+kubectl get ingress
 ```
 ```
-kubectlexposedeploymentghost—port=2368
+kubectl expose deployment g host—port=2368
 ```
 1.
 # HorizontalPodAutoscalerWhenheapsterruns:
 ```
-kubectlgethpa
+kubectl get hpa
 ```
 ```
-kubectlautoscale—help
+kubectl autoscale —help
 ```
 1.
 # DaemonSets
 ```
-kubectlgetdaemonsets
+kubectl get daemonsets
 ```
 ```
-kubectlgetds
+kubectlget ds
 ```
 1.
 # SchedulerNodeSelectorbasedpolicy:
 ```
-kubectllabelnodeminikubefoo=bar
+kubectl label node minikube foo=bar
 ```
 # NodeBindingthroughAPIServer:
-```
-kubectlproxy
-```
-```
+
+kubectl proxy
+
 curl -H "Content-Type: application/json" -X POST — data@binding.json http://localhost:8001/api/v1/namespaces/default/pods/foobar-sched/binding
-```
-1.
+
+
 # TaintsandTolerations
 
 _ **NodeSelector** __**based**__ **policy:** _
 ```
-kubectltaintnodemasterfoo=bar:NoSchedule
+kubectl taint node master foo=bar:NoSchedule
 ```
-1.
+
 # Troubleshooting
 ```
-kubectldescribe
+kubectl describe
 ```
 ```
-kubectllogs
+kubectl logs
 ```
 ```
-kubectlexec
+kubectl exec
 ```
 ```
-kubectlgetnodes—show-labels
+kubectl get nodes —show-labels
 ```
 ```
-kubectlgetevents
+kubectl get events
 ```
 1.
 # RoleBasedAccessControl
 ```
-kubectlcreaterolefluent-reader—verb=get—verb=list—
+kubectl create role fluent-reader --verb=get,list,watch --resource=pods
 ```
-verb=watch—resource=pods
+kubectl create rolebinding foo --role=fluent-reader --user=minikube
 ```
-kubectlcreaterolebindingfoo—role=fluent-reader—
+
 ```
-user=minikube
-```
-kubectlgetrolebindingfoo-oyaml
+kubectl get rolebinding foo -o yaml
 ```
