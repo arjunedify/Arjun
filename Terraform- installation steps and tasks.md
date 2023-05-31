@@ -33,9 +33,9 @@ Then goto ![](RackMultipart20230520-1-ydqvai_html_133d13c6d8d4b2a0.png)
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/c8e4dd76-da01-4702-a55b-3f60a907c8e0)
 
 After downloading terraform check version by command
-
-$terraform -version
-
+```
+terraform -version
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/f7ea7a23-5f4a-4c1e-8a19-2fb1ccee6e5b)
 
 Create IAM user and download access key and secret key for it
@@ -154,7 +154,7 @@ Virialized using var.tf calling variable from main.tf instead of directly declar
 Main.tf file
 
 # provider aws
-
+ ```
 provider "aws" {
 
 region = var.region
@@ -164,9 +164,9 @@ access\_key = var.access\_key
 secret\_key = var.secret\_key
 
 }
-
+```
 # Create a VPC
-
+```
 resource "aws\_vpc" "digitalLyncvpc" {
 
 cidr\_block = var.cidr\_block
@@ -184,9 +184,9 @@ Name = "digitalLync"
 }
 
 }
-
+```
 # creating Public Subnet1
-
+```
 resource "aws\_subnet" "pub\_subnet1" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -204,9 +204,9 @@ Name = "PUB-SB1"
 }
 
 }
-
+```
 # creating Public Subnet2
-
+```
 resource "aws\_subnet" "pub\_subnet2" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -224,9 +224,9 @@ Name = "PUB-SB2"
 }
 
 }
-
+```
 # creating private Subnet1
-
+```
 resource "aws\_subnet" "pvt\_subnet1" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -244,9 +244,9 @@ Name = "PVB-SB1"
 }
 
 }
-
+```
 # creating private Subnet2
-
+```
 resource "aws\_subnet" "pvt\_subnet2" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -264,9 +264,9 @@ Name = "PVB-SB2"
 }
 
 }
-
+```
 # creating Internet Gateway
-
+```
 resource "aws\_internet\_gateway" "digitalLync\_igw" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -278,9 +278,9 @@ Name = "IGW"
 }
 
 }
-
+```
 # creating Public Route Table
-
+```
 resource "aws\_route\_table" "digitalLync\_pub\_rt" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -298,7 +298,9 @@ output "aws\_route\_table\_public\_ids" {
 value = aws\_route\_table.digitalLync\_pub\_rt.id
 
 }
-
+```
+**Public route Table attch to internet gateway**
+```
 resource "aws\_route" "public\_internet\_gateway" {
 
 route\_table\_id = aws\_route\_table.digitalLync\_pub\_rt.id
@@ -308,11 +310,11 @@ destination\_cidr\_block = "0.0.0.0/0"
 gateway\_id = aws\_internet\_gateway.digitalLync\_igw.id
 
 }
-
+```
 # Private Route Table
 
 # Default is private
-
+```
 resource "aws\_route\_table" "digitalLync\_pvt\_rt" {
 
 vpc\_id = aws\_vpc.digitalLyncvpc.id
@@ -324,9 +326,9 @@ Name = "PVT-RT"
 }
 
 }
-
+```
 # Public Route Table Association
-
+```
 resource "aws\_route\_table\_association" "digitalLync\_pub\_assoc" {
 
 subnet\_id = aws\_subnet.pub\_subnet1.id
@@ -334,9 +336,9 @@ subnet\_id = aws\_subnet.pub\_subnet1.id
 route\_table\_id = aws\_route\_table.digitalLync\_pub\_rt.id
 
 }
-
+```
 # Private Route Table Association
-
+```
 resource "aws\_route\_table\_association" "digitalLync\_pvt\_assoc" {
 
 subnet\_id = aws\_subnet.pvt\_subnet1.id
@@ -344,9 +346,9 @@ subnet\_id = aws\_subnet.pvt\_subnet1.id
 route\_table\_id = aws\_route\_table.digitalLync\_pvt\_rt.id
 
 }
-
+```
 # digitalLync Security Group
-
+```
 resource "aws\_security\_group" "digitalLync\_sg" {
 
 name = "allow\_sshhttp"
@@ -402,9 +404,9 @@ Name = "allow\_sshhttp"
 }
 
 }
-
+```
 # creating Instance
-
+```
 resource "aws\_instance" "centos7\_instance" {
 
 ami = "ami-011939b19c6bd1492"
@@ -422,5 +424,5 @@ vpc\_security\_group\_ids = [aws\_security\_group.digitalLync\_sg.id]
 # user\_data = file("data.sh")
 
 }
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/e1fad663-ac87-437f-bf86-dd96424109b7)
