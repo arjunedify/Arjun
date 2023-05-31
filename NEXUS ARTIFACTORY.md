@@ -1,26 +1,26 @@
-# **NEXUS ARTIFACTORY**
+## **NEXUS ARTIFACTORY**
 
-# **Prerequisites:**
-
--
-# Ubuntu server 20 version .
--
-# Security Group ports open 8081,22,8080.
--
-# Git, Docker, Node, Curl, Wget Tools.
-
-# **Install the Ubuntu server:**
+## **Prerequisites:**
 
 -
-# Install Ubuntu server 20 version and take the compute power of t2.medium.
+## Ubuntu server 20 version .
 -
-# Allow the Security ports of 8081,22,8080.
+# #Security Group ports open 8081,22,8080.
 -
-# Launch the instance and login into the server with Bash Terminal with public ip address
+# #Git, Docker, Node, Curl, Wget Tools.
+
+## **Install the Ubuntu server:**
+
+-
+## Install Ubuntu server 20 version and take the compute power of t2.medium.
+-
+## Allow the Security ports of 8081,22,8080.
+-
+## Launch the instance and login into the server with Bash Terminal with public ip address
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/4ac624a0-de2f-4fac-8274-cac17f6f0b32)
 
 -
-# Clone the Application code from the Github Repository
+## Clone the Application code from the Github Repository
 ```
 git clone -b vm-docker-cicd https://github.com/digitaledify/lms-public.githt tps://github.com/digitaledify/lms-public.git
 ```
