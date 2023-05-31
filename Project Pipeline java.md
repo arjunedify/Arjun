@@ -18,41 +18,49 @@ Jenkins Download URL:
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/473c5762-32e5-4ce7-8c00-33a88952079a)
 
-
+```
 sudo yum install wget -y
-
+```
+```
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
-
+```
 https://pkg.jenkins.io/redhat-stable/jenkins.repo
-
+```
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-
+```
+```
 sudo yum upgrade
-
+```
 _# Add required dependencies for the jenkins package_
-
+```
 sudo yum install java-11-openjdk
-
+```
+```
 sudo yum install jenkins
-
+```
+```
 sudo systemctl daemon-reload
-
+```
+```
 sudo systemctl start Jenkins
-
+```
+```
 sudo systemctl enable Jenkins
-
+```
+```
 sudo netstat -ntpl
-
+```
+```
 java - -version
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/e87a2612-d5c1-4a17-b5db-a9622d0aeaf3)
 
 Install suggested Plugins
 
 **Install git:**
-
+```
 sudo yum install git -y
-
+```
 **Installing Maven**
 
 [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
@@ -62,26 +70,29 @@ sudo yum install git -y
 **Copy the url**
 
 wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.tar.gz
-
+```
 ls
-
+```
+```
 tar -xf apache-maven-3.9.1-bin.tar.gz
-
+```
+```
 cp -rf apache-maven-3.9.1 maven
-
+```
 now move the maven to usr share directory
-
+```
 mv maven /usr/share/maven
-
+```
 you can validate the maven with help of this command
-
+ ```
 /usr/share/maven/bin/mvn validate
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/8162a24d-8a5d-47e1-afbd-71a2e50c5b7f)
 
 To get ip address
+```
  curl ifconfig.io
-
+```
 Now goto Jenkins
 
 Create a pipeline project
@@ -110,11 +121,12 @@ Go repository setting \> webhooks\> add webhooks
 http://35.169.107.8:8080/github-webhook/
 
 Same for validate , build
-
+```
 /usr/share/maven/bin/mvn validate
-
+```
+```
 /usr/share/maven/bin/mvn package
-
+```
 **Instead of Separate jobs we can club all this job into a single job with help of Jenkins files**
 
 Jenkinsfile
@@ -124,7 +136,7 @@ _ **Jenkinsfile** _ is a text file that contains the definition of a Jenkins Pip
 Note : it should be same format as written above Don't use Capital letters.
 
 [https://www.jenkins.io/doc/book/pipeline/jenkinsfile/](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/)
-
+```
 pipeline {
 
 agent any
@@ -164,7 +176,7 @@ echo 'Deploying....'
 }
 
 }
-
+```
 Creating project using Jenkinsfile
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/788e37cf-6afe-4e29-9516-fa9db06ebd43)
@@ -194,7 +206,7 @@ Add a Jenkinsfile in github repo
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/9de56549-c722-4523-9cfa-42857bc4bb77)
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/8064aef2-4017-4541-93db-b60b88c4ae1f)
-
+```
 pipeline {
 
 agent any
@@ -234,7 +246,7 @@ echo 'Deploying....'
 }
 
 }
-
+```
 **[centos@ip-172-31-16-244 .git]$ cd /var/lib/jenkins/workspace**
 
 **[centos@ip-172-31-16-244 workspace]$ ls**
