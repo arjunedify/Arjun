@@ -11,51 +11,58 @@ Open ports in security group
 22 80 8080 443 5432
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/ac51505c-c686-4c33-9ebc-a1ee745e42d6)
-
+```
 sudo apt install update -y
-
+```
+```
 sudo apt install upgrade -y
-
+```
+```
 sudo apt install wget -y
-
+```
+```
 sudo apt install git -y
-
+```
+```
 sudo apt install nginx -y
-
+```
+```
 curl -fsSL https://deb.nodesource.com/setup\_16.x | sudo -E bash - &&sudo apt-get install -y nodejs
-
+```
+```
 node -v
-
+```
 Note : Checkout vm-docker-cicd branch
 
 - Step 1 : First Run the Backend Servers
 
  Install postgress
-
+```
 sudo apt-get -y install postgresql
-
+```
 Goto [https://www.postgresql.org/download/linux/ubuntu/](https://www.postgresql.org/download/linux/ubuntu/)
 
 By running the Below 4 commands install the postgress
-
+```
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb\_release -cs)-pgdg main" \> /etc/apt/sources.list.d/pgdg.list'
-
+```
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
+```
 sudo apt-get update
-
+```
+```
 sudo apt-get -y install postgresql
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/0ccd3449-baef-4109-af26-cb5ebe1625fe)
 
 - Once we installed postgress we need to set the password for the postgress
  command to set the password for postgress
 
 Swith user to database user
-
+```
 sudo su postgres
-
-sudo su postgres
+```
+ 
 
 To connect to postgress
 
@@ -81,26 +88,30 @@ Navigate to api folder of lms-public /api
  then create .env file in api folder which is our backend source code.
 
 .env file
-
+```
 MODE=production
 
 PORT=8080
-
+```
 DATABASE\_URL=postgresql://postgres: **digital** @localhost:5432/postgres
 
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/ce8b428b-450f-4e98-8015-56d756717cdc)
 
 - And run the below commands to build the code
-
- #sudo  npm install
-
-# sudo npm install -g pm2
-
-#sudo  npx prisma db push
+```
+ sudo  npm install
+```
+```
+sudo npm install -g pm2
+```
+```
+sudo  npx prisma db push
+```
 
 Now again run the build command as we have done changes in .env file after running npm build new build folder will be generated.
-
+```
 sudo npm run build
+```
 
 NODE\_PORT=8080 pm2 start -i 0 build/index.js
 
@@ -148,9 +159,9 @@ VITE\_API\_URL value to https://\<backend\_url\>/api
 
 Buiding frontend in order to update backend url with frontend
 
-
+```
  sudo npm install
-
+```
 d
 
 we will get a dist file that is our frontend code … which we are deploying with nginx
@@ -162,11 +173,13 @@ We got the dist file
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/b8f63c91-5019-498a-a254-856877ebdbbc)
 
 Now we will remove the default config file of nginx
-
-#sudo rm /etc/nginx/sites-enabled/default
-
-#sudo vi /etc/nginx/sites-available/lms-app
-
+```
+sudo rm /etc/nginx/sites-enabled/default
+```
+```
+sudo vi /etc/nginx/sites-available/lms-app
+```
+```
 server {
 
 server\_name [dev.mubeen.cloud](http://www.mubeen.cloud/);
@@ -184,31 +197,36 @@ proxy\_pass http://localhost:8080;
 }
 
 }
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/af4793d8-6b34-4fce-8289-50931cd10635)
 
 Now goto DNS provider (godaddy or hostinger etc)
 
 Add A record with ip address
-
+```
 sudo ln -s /etc/nginx/sites-available/lms-app /etc/nginx/sites-enabled/lms-app
-
+```
 Install CertBot : for https connection
 
 [https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
-
+```
 sudo snap install core; sudo snap refresh core
-
+```
+```
 sudo snap install --classic certbot
-
+```
+```
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
-
+```
+```
 sudo certbot --nginx
-
+```
+```
  sudo nginx -t
-
+```
+```
  sudo nginx -s reload
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/71dba6d8-07ca-421d-93f2-d65786b3697f)
 
 History of commands:
