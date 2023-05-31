@@ -21,24 +21,25 @@
 
 -
 # Clone the Application code from the Github Repository
-
+```
 git clone -b vm-docker-cicd [https://github.com/digitaledify/lms-public.git](https://github.com/digitaledify/lms-public.git)
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/f2d551f2-8823-40a6-9c15-c9f08be617b5)
 
 - Install node 16 version in the ubuntu machine
-
+```
 curl -fsSL https://deb.nodesource.com/setup\_16.x | sudo -E bash - &&sudo apt-get install -y nodejs
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/220db3f1-def9-42ba-84ab-738161e9d0e0)
 
 - Change the directory to the lms-public/webapp
 - Build the frontend code with the following build commands
-
+```
 sudo npm install
-
+```
+```
 sudo npm run build
-
+```
 - In the lms-public/webapp directory we will get the **dist** file ,which is our build Artifact.
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/1bdfd63d-06e9-4a7c-ad1c-4341a5706ee4)
@@ -50,19 +51,23 @@ sudo npm run build
 [
 # https://get.docker.com
 ](https://get.docker.com/)
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-
-sh get-docker.sh
-
+```
+curl -fsSL https://get.docker.com -o install-docker.sh
+```
+```
+sh install-docker.sh --dry-run
+```
+```
+sh install-docker.sh
+```
 - Docker is installed in the server and add Docker user to the server user
-
+```
 sudo useradd -aG docker $user
-
+```
 - Run the nexus container by pulling the nexus docker image form the dockerhub by the following command
-
+```
 docker run -d -p 8081:8081 --name nexus sonatype/nexus
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/d8cf2373-fea4-4f8c-be56-34531ae4337f)
 
 - Browse the Nexus server by ip-address:8081 in Chrome
@@ -76,11 +81,12 @@ docker run -d -p 8081:8081 --name nexus sonatype/nexus
 - Default username is admin,Password need to copy from the container which is located in the
 
 /nexus-data/admin.password -c277f4f7-b7c6-4a00-8940-27380b1bc560
-
+```
 docker exec -it container id sh
-
-cat/nexus-data/admin.password
-
+```
+```
+cat /nexus-data/admin.password
+```
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/e63c08f8-5ca3-4902-88f9-b783e3d1923c)
 
 - Reset the password again with the new password
@@ -103,9 +109,9 @@ azureuser@Nexus:~/lms-public/webapp$ zip dist.zip dist
 
 - By the above command we will get the zip file of the dist.zip
 - From the Server we need to push the Artifact into the Nexus Repository
-
-curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/](http://74.225.248.45:8081/repository/lms-public/)
-
+```
+curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/]
+```
 admin == username of Nexus login
 
 1111111111@yY == password of Nexus login
@@ -119,11 +125,12 @@ admin == username of Nexus login
 - To download the files.zip Artifact from the Nexus Repository the following command need to run
 
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/8123e184-ff51-49d6-931d-ee4b7b0f4740)
-
+```
 wget --user admin --password 1111111111@yY [http://74.225.248.45:8081/repository/lms-public/files.zip](http://74.225.248.45:8081/repository/lms-public/files.zip)
-
+```
+```
 curl -u admin:Admin123\* -X GET '[http://20.172.187.108:8081/repository/lms/dist-1.1.zip](http://20.172.187.108:8081/repository/lms/dist-1.1.zip)' --output dist-1.1.zip.
-
+```
 admin == username of Nexus login
 
 1111111111@yY == password of Nexus login
@@ -135,9 +142,10 @@ Files.zip path:[http://74.225.248.45:8081/repository/lms-public/files.zip](http:
 ![image](https://github.com/arjunedify/Arjun/assets/130965749/79fbebf2-49ec-41f3-9c1f-1488522330d0)
 
 - Finally we uploaded the Artifact from the server to the Nexus Repo
-
+```
 curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/](http://74.225.248.45:8081/repository/lms-public/)
-
+```
 - Dowloaded the Articact from the Nexus Repo to the server
-
+```
 curl -v -u admin:1111111111@yY --upload-file dist.zip [http://74.225.248.45:8081/repository/lms-public/](http://74.225.248.45:8081/repository/lms-public/)
+```
