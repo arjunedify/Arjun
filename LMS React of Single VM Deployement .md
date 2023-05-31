@@ -67,11 +67,12 @@ sudo su postgres
 To connect to postgress
 
 postgres@ip-172-31-31-67:/home/ubuntu$ psql
-
-  #sudo su postgres
-
-#psql
-
+```
+  sudo su postgres
+```
+```
+psql
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/585fa37e-2a42-4aef-b241-7b8fcc6a00be)
 
 Set the password using following command
@@ -92,9 +93,9 @@ Navigate to api folder of lms-public /api
 MODE=production
 
 PORT=8080
-```
-DATABASE\_URL=postgresql://postgres: **digital** @localhost:5432/postgres
 
+DATABASE\_URL=postgresql://postgres: **digital** @localhost:5432/postgres
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/ce8b428b-450f-4e98-8015-56d756717cdc)
 
 - And run the below commands to build the code
@@ -112,9 +113,9 @@ Now again run the build command as we have done changes in .env file after runni
 ```
 sudo npm run build
 ```
-
+```
 NODE\_PORT=8080 pm2 start -i 0 build/index.js
-
+```
 ![image](https://github.com/arjunedify/Arjun/assets/132984407/5fbae98c-37f2-42ef-8592-d379e56a0425)
 
 Setting port 8080 for backend
@@ -162,7 +163,7 @@ Buiding frontend in order to update backend url with frontend
 ```
  sudo npm install
 ```
-d
+
 
 we will get a dist file that is our frontend code … which we are deploying with nginx
 
