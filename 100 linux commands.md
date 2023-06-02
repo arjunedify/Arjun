@@ -103,23 +103,23 @@
  ```bash
   ping — Test connectivity to a network host
  ```
-    ```bash
+ ```bash
   ssh — Secure shell remote login and command execution
-   ```
-   ```bash
+ ```
+ ```bash
   scp — Secure copy files between hosts
-   ```
+ ```
   ```bash
   rsync — Remote file and directory synchronization
    ```
   ```bash
   curl — Transfer data from or to a server using various protocols
-```
+  ```
   wget — Retrieve files from the web using various protocols
  ```
  ```bash
   ftp — File Transfer Protocol client
-  ```
+ ```
   ```bash
   sftp — Secure File Transfer Protocol client
   ```
