@@ -9,13 +9,13 @@
    ```
  ```bash
   cat — Concatenate and display files
-   ```
+ ```
 ```bash
   touch — Create an empty file
-   ```
-    ```bash
+```
+  ```bash
   cp — Copy files and directories
-   ```
+  ```
     ```bash
   mv — Move or rename files and directories
    ```
