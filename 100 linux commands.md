@@ -16,93 +16,93 @@
   ```bash
   cp — Copy files and directories
   ```
-    ```bash
+ ```bash
   mv — Move or rename files and directories
-   ```
-    ```bash
+ ```
+ ```bash
   rm — Remove files and directories
-   ```
-    ```bash
+ ```
+ ```bash
   mkdir — Create a new directory
-   ```
-    ```bash
+ ```
+ ```bash
   rmdir — Remove an empty directory
-   ```
-    ```bash
+ ```
+ ```bash
   cut — Cut out sections of a file
-   ```
-    ```bash
+ ```
+ ```bash
   gzip — Compress or decompress files using gzip
-   ```
-    ```bash
+ ```
+ ```bash
   gunzip — Decompress files compressed with gzip
-   ```
-    ```bash
+ ```
+ ```bash
   find — Find files and directories matching a pattern
-   ```
-    ```bash
+ ```
+ ```bash
   grep — Search for a pattern in a file
-   ```
-    ```bash
+ ```
+ ```bash
   awk — Pattern scanning and processing language
-   ```
-    ```bash
+ ```
+ ```bash
   sed — Stream editor for filtering and transforming text
-   ```
-    ```bash
+ ```
+ ```bash
   head — Display the first few lines of a file
-   ```
-    ```bash
+ ```
+ ```bash
   tail — Display the last few lines of a file
-   ```
-    ```bash
+ ```
+ ```bash
   sort — Sort lines of a file
-   ```
-    ```bash
+ ```
+ ```bash
   uniq — Remove duplicate lines from a file
-   ```
-    ```bash
+ ```
+ ```bash
   wc — Count lines, words, and characters in a file
-   ```
-    ```bash
+  ```
+ ```bash
   diff — Compare two files line by line
-   ```
-    ```bash
+ ```
+ ```bash
   patch — Apply a patch to a file
-   ```
-    ```bash
+ ```
+ ```bash
   chmod — Change permissions of files and directories
-   ```
-    ```bash
+  ```
+  ```bash
   chown — Change the owner of a file or directory
-   ```
-    ```bash
+  ```
+  ```bash
   chgrp — Change the group ownership of a file or directory
-   ```
-    ```bash
+  ```
+  ```bash
   ps — List running processes
-   ```
-    ```bash
+  ```
+  ```bash
   top — Display system resource usage and process information
-   ```
-    ```bash
+  ```
+  ```bash
   kill — Send a signal to a process to terminate it
-   ```
-    ```bash
+  ```
+  ```bash
   du — Display disk usage of files and directories
-   ```
-    ```bash
+  ```
+  ```bash
   df — Display free disk space on the file system
-   ```
-    ```bash
+  ```
+ ```bash
   mount — Mount a file system
-   ```
-    ```bash
+ ```
+ ```bash
   umount — Unmount a file system
-   ```
-    ```bash
+ ```
+ ```bash
   ping — Test connectivity to a network host
-   ```
+ ```
     ```bash
   ssh — Secure shell remote login and command execution
    ```
