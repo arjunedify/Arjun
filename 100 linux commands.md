@@ -115,11 +115,12 @@
   ```bash
   curl — Transfer data from or to a server using various protocols
   ```
+  ```bash
   wget — Retrieve files from the web using various protocols
- ```
+  ```
   ```bash
   ftp — File Transfer Protocol client
-  ```
+   ```
   ```bash
   sftp — Secure File Transfer Protocol client
   ```
