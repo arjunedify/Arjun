@@ -7,10 +7,10 @@
   ```bash
   pwd — Print working directory
    ```
-    ```bash
+ ```bash
   cat — Concatenate and display files
    ```
-    ```bash
+```bash
   touch — Create an empty file
    ```
     ```bash
