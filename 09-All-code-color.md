@@ -109,7 +109,7 @@ Creating a branch
 
 - Made changes, staged the changes and commited changes
  ```bash
-  - git revert \<commit\>
+   git revert \<commit\>
  ```
 
 ## **Git Ignore**
