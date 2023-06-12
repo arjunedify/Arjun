@@ -305,7 +305,7 @@ In this final step, you will merge your readme-edits branch into the main branch
 
 ## **Linux Architecture**
 
-![](RackMultipart20230610-1-d34f8_html_248b2848ea00e1c1.jpg)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/d5d4d694-59e2-42f6-93b0-c482e65fdd80)
 
 - Kernel: Central module(Heart) of OS, interacts with Hardware and responsible for memory management, process management etc.
 
@@ -328,7 +328,7 @@ The directory separator in Linux is the forward slash (/). When talking about di
 
 If you hear someone say "look in slash" or "that file is in slash," they are referring to the root directory.
 
-![](RackMultipart20230610-1-d34f8_html_260d72e7f9e8cd2b.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/08c471e9-ab76-45d2-9eab-19368fc2d8da)
 
 ##
 
@@ -436,55 +436,72 @@ copies and pastes 5 lines - **5yy+p**
 ## **File & Directory Management**
 
 - File
-  - cp \<source-file\> \<dest-path\>
+```bash
+   cp \<source-file\> \<dest-path\>
+```
 - Directory
-  - cp -r \<source-dir\> \<dest-path\>
-
+```bash
+ cp -r \<source-dir\> \<dest-path\>
+```
 - The above syntaxes( **cp** ) are for performing local copies, when you want to copy across remote machines we use " **scp**" command
 
 - Copy from Laptop to Remote Server(AWS)
-  - scp -i \<pem-key\> \<file-to-copy\> username@\<public-ip-address\>:/path
-
+  ```bash
+  scp -i \<pem-key\> \<file-to-copy\> username@\<public-ip-address\>:/path
+  ```
 - Copy from Remote Server(AWS) to Laptop
-  - scp -i \<pem-key\> username@\<public-ip-address\>:/path\_server .
-
+```bash
+scp -i \<pem-key\> username@\<public-ip-address\>:/path\_server .
+```
 - File
-  - rm \<source-file\>
+```bash
+  rm \<source-file\>
+```
 - Directory
-  - rm -r \<source-dir\>
-
+```bash
+rm -r \<source-dir\>
+```
 - Rename
-  - mv \<old-file\> \<new-file-name\>
-
+```bash
+ mv \<old-file\> \<new-file-name\>
+```
 - Move
-  - mv \<old-file\> \<dest-directory\>
-
+```bash
+ mv \<old-file\> \<dest-directory\>
+```
 scp secure copy
 
 scp syntax for laptop to AWS server
-
-scp -i key file\_transfer username@public-IP:~
-
+```bash
+scp -i key file-transfer username@public-IP:~
+```
 scp syntax for AWS server to AWS server
 
-scp -i key file\_transfer username@private-IP:~
+```bash
+scp -i key file-transfer username@private-IP:~
+```
 
 scp syntax for AWS server to laptop
 
-scp -i key username@public-IP:~/file\_to\_download
-
+```bash
+scp -i key username@public-IP:~/file-to-download
+```
 ## **Archive Files Using tar and zip utilities**
 
 - A Linux tarball ( "tar.gz" or "tar.bz2" file ) is nothing but a system file format that combines and compresses multiple files. Tarballs are common file formats on Linux operating systems. Tarballs are often used for distribution of software/media or backup purposes. This page shows how to tar a file in Linux using the Linux tar command line option.
 
-\> tar cvf FILENAME.tar DIRECTORY/
-
-\> tar xvf FILE.tar
-
-\> zip -r FILE.zip DIRECTORY/
-
-\> unzip FILE.zip
-
+```bash
+tar cvf FILENAME.tar DIRECTORY/
+```
+```bash
+ tar xvf FILE.tar
+```
+```bash
+zip -r FILE.zip DIRECTORY/
+```
+```bash
+unzip FILE.zip
+```
 ##
 
 
@@ -493,33 +510,41 @@ scp -i key username@public-IP:~/file\_to\_download
 A software repository, or " repo" for short, is a storage location for software packages.It is a collection of all related files, w.r.t given OS version
 
 \> Yum :: Yellowdog Updater, Modified
-
+```bash
 sudo apt update
-
+```
+```bash
 sudo apt list --installed
-
+```
+```bash
 sudo apt list --installed | grep package
-
+```
+```bash
 sudo apt list --installed | grep java
-
+```
+```bash
 sudo apt list --installed | grep python3
+```
 
 Install & Update
 
+```bash
 sudo apt -y install package
-
+```
+```bash
 sudo apt -y install elinks
-
+```
 Remove
-
+```bash
 sudo apt -y remove package
-
+```
+```bash
 sudo apt -y remove elinks
-
-![](RackMultipart20230610-1-d34f8_html_7aa0ce5346a22593.png)
-
+```
+![image](https://github.com/arjunedify/Arjun/assets/130965749/91e7171c-4afa-4111-858d-97c3d1ad8eaf)
+```bash
 sudo apt-get install -y mongodb-org
-
+```
 No package mongodb-org available.
 
 [https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
@@ -545,14 +570,18 @@ Management tasks requiring root access can be completed by using the sudo comman
 
 When you create a user during installation, that user is added automatically to the admin group.
 
-\> sudo adduser username
-
-\> sudo deluser newuser
-
-\> sudo addgroup groupname
-
-\> sudo delgroup groupname
-
+ ```bash
+ sudo adduser username
+ ```
+```bash
+  sudo deluser newuser
+```
+```bash
+  sudo addgroup groupname
+```
+```bash
+  sudo delgroup groupname
+```
 ## **File Permissions**
 
 There are three options for permission groups available to you in Linux. These are
@@ -572,37 +601,39 @@ Write (w): Permits the user to write or modify a file or directory.
 Execute (x): A user or grup with execute permissions can execute a file or view a directory.
 
 The command for changing directory permissions for group owners is similar, but add a "g" for group or "o" for users:
-
+```bash
 chmod g+w filename
-
+```
+```bash
 chmod g-wx filename
-
+```
+```bash
 chmod o+w filename
-
+```
 ## **Service Management**
 
 In order to manage the services, you first need to know what services are available on your system.
 
 Combine it with the grep command and you can display just the running services:
-
-\> sudo systemctl | grep running
-
+```bash
+  sudo systemctl | grep running
+```
 To start a service in Linux, you just need to use its name like this:
-
-\> systemctl start \<service-name\>
-
+```bash
+  systemctl start \<service-name\>
+```
 To stop a systemd service, you can use the stop option of systemctl command:
-
-\> systemctl stop \<service-name\>
-
+```bash
+  systemctl stop \<service-name\>
+```
 To restart a service in Linux with systemd, you can use:
-
-\> systemctl restart \<service-name\>
-
+```bash
+  systemctl restart \<service-name\>
+```
 You can confirm that you have successfully executed a certain action by printing the service status:
-
-\> systemctl status \<service-name\>
-
+```bash
+  systemctl status \<service-name\>
+```
 ## **Networking**
 
 ## **Understand how IP addresses, ports, and DNS works**
@@ -611,7 +642,7 @@ You can confirm that you have successfully executed a certain action by printing
 
 - The computers within a network may use vastly different software and hardware; however, the use of protocols enables them to communicate with each other regardless.
 
-![](RackMultipart20230610-1-d34f8_html_de8e89c7986577ce.png)
+![image](https://github.com/arjunedify/Arjun/assets/130965749/470c45a6-8a65-4c90-83b0-69e67bf0969f)
 
 - Ports are standardized across all network-connected devices, with each port assigned a number. Most ports are reserved for certain protocols — for example, all Hypertext Transfer Protocol (HTTP) messages go to port 80. While IP addresses enable messages to go to and from specific devices, port numbers allow targeting of specific services or applications within those devices.
 
@@ -636,7 +667,7 @@ There are 65,535 possible port numbers, although not all are in common use. Some
 - To handle such high volumes of traffic, most applications have many resource servers with duplicate data between them. A load balancer is a device that sits between the user and the server group and acts as an invisible facilitator, ensuring that all resource servers are used equally.
 
 The simplest configuration for load balancing with nginx may look like the following:
-
+```bash
 http {
 
 upstream myapp1 {
@@ -662,7 +693,7 @@ proxy\_pass http://myapp1;
 }
 
 }
-
+```
 ## **HTTP/HTTPS**
 
 HTTP stands for HyperText Transfer Protocol. It is invented by Tim Berner. HyperText is the type of text which is specially coded with the help of some standard coding language called HyperText Markup Language (HTML). HTTP provides a standard between a web browser and a web server to establish communication. It is a set of rules for transferring data from one computer to another. Data such as text, images, and other multimedia files are shared on the World Wide Web. Whenever a web user opens their web browser, the user indirectly uses HTTP. It is an application protocol that is used for distributed, collaborative, hypermedia information systems.
